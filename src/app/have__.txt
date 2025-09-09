@@ -1,0 +1,147 @@
+
+director.palwal@shauryafoundationtrust.org
+Pass: Alpha@2025??
+
+director.palwal@shauryafoundationtrust.org
+Pass: Alpha@2025??
+
+"use client"
+
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import Image from "next/image"
+import type React from "react"
+import { Phone, Mail, MapPin } from "lucide-react"
+import { motion } from "framer-motion"
+
+export default function Footer() {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  }
+
+  return (
+    <footer className="relative overflow-hidden rounded-tr-[100px] bg-gradient-to-b from-[#2E1065] to-[#4C1D95]">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24 relative z-10">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-16"
+        >
+          <div className="max-w-2xl text-center lg:text-left">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Redefining Ability
+              <br />
+              <span className="bg-gradient-to-r from-[#F59E0B] to-[#EF4444] bg-clip-text text-transparent">
+                Every Step of the Way
+              </span>
+            </h2>
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <Button
+                asChild
+                className="bg-white text-[#4C1D95] hover:bg-white/90 mt-6 px-8 py-4 text-base font-medium rounded-xl shadow-lg transition-all duration-300"
+              >
+                <Link href="/contact">Contact Now</Link>
+              </Button>
+            </motion.div>
+          </div>
+
+          <motion.div 
+            whileHover={{ rotate: 5, scale: 1.05 }}
+            className="lg:ml-auto w-32 sm:w-40 lg:w-52 2xl:w-auto"
+          >
+            <Image
+              src="/logo.png"
+              alt="Shaurya Logo"
+              width={200}
+              height={200}
+              className="object-contain w-full h-auto drop-shadow-lg"
+            />
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Footer Content */}
+      <div className="container mx-auto px-4 sm:px-6 pt-12 lg:pt-16 relative z-10">
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-white/80">
+          {/* Addresses */}
+          <motion.div 
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <div>
+              <div className="flex items-center mb-3">
+                <MapPin className="w-5 h-5 mr-2 text-[#F59E0B]" />
+                <h3 className="font-semibold text-white">Registered Office</h3>
+              </div>
+              <address className="text-sm not-italic">
+                B 104/2, Western Avenue,<br />
+                Maharani Bagh,<br />
+                New Friends Colony,<br />
+                New Delhi, Delhi 110065
+              </address>
+            </div>
+            <div>
+              <div className="flex items-center mb-3">
+                <MapPin className="w-5 h-5 mr-2 text-[#F59E0B]" />
+                <h3 className="font-semibold text-white">Delhi Center</h3>
+              </div>
+              <address className="text-sm not-italic">
+                B-538 Ground floor,<br />
+                New Friends Colony,<br />
+                Delhi 110025
+              </address>
+            </div>
+          </motion.div>
+
+          {/* Contact */}
+          <motion.div 
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="lg:col-span-2"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+                <div className="space-y-4">
+                  <Link href="tel:01140518320" className="flex items-center hover:text-white transition-colors">
+                    <Phone className="w-5 h-5 mr-3 text-[#F59E0B]" />
+                    <span>011 40518320</span>
+                  </Link>
+                  <Link href="tel:+919650316800" className="flex items-center hover:text-white transition-colors">
+                    <Phone className="w-5 h-5 mr-3 text-[#F59E0B]" />
+                    <span>+91 9650316800</span>
+                  </Link>
+                  <Link href="mailto:info@shaurya.org" className="flex items-center hover:text-white transition-colors">
+                    <Mail className="w-5 h-5 mr-3 text-[#F59E0B]" />
+                    <span>info@shaurya.org</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Copyright */}
+        <motion.div 
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-white/60 text-sm mt-16 pb-8 border-t border-white/10 pt-8 text-center"
+        >
+          <p>&copy; {new Date().getFullYear()} Shaurya Foundation. All rights reserved.</p>
+        </motion.div>
+      </div>
+    </footer>
+  );
+}
