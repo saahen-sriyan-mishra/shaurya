@@ -52,24 +52,32 @@ const FlipCard = ({
   description: string;
 }) => {
   return (
-    <div className="group perspective w-64 h-80 mx-auto flip-card">
+    <div className="group perspective w-72 h-[28rem] mx-auto flip-card">
       <div className="relative preserve-3d w-full h-full">
         {/* Front of card */}
-        <div className="absolute backface-hidden w-full h-full border rounded-lg overflow-hidden bg-white shadow-md">
-          <div className="h-48 w-full overflow-hidden">
-            <div className="w-full h-full bg-gray-300 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              {/* Placeholder for image */}
-              <span className="text-gray-500">Image: {image}</span>
+        <div className="absolute backface-hidden w-full h-full border rounded-lg overflow-hidden bg-white shadow-md flex flex-col">
+          {/* Image container - 90% height */}
+          <div className="h-[90%] w-full overflow-hidden">
+            <div className="w-full h-full bg-gray-300 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative">
+              <Image
+                src={image}
+                alt={title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
           </div>
-          <div className="p-4">
-            <h3 className="font-semibold text-lg mb-2">{title}</h3>
+          
+          {/* Title container - remaining 10% height */}
+          <div className="h-[10%] p-4 flex items-center justify-center">
+            <h3 className="font-semibold text-lg mb-0 text-center">{title}</h3>
           </div>
         </div>
         
         {/* Back of card */}
-        <div className="absolute rotate-y-180 backface-hidden w-full h-full border rounded-lg overflow-hidden bg-white p-4 shadow-md">
-          <div className="h-full overflow-y-auto">
+        <div className="absolute rotate-y-180 backface-hidden w-full h-full border rounded-lg overflow-hidden bg-white shadow-md">
+          <div className="h-full overflow-y-auto p-4">
             <h3 className="font-semibold text-lg mb-3">{title}</h3>
             <p className="text-gray-700">{description}</p>
           </div>
@@ -80,7 +88,6 @@ const FlipCard = ({
 };
 
 // Tab Component
-// Tab Component - Corrected image and video paths
 const TabComponent = () => {
   return (
     <div className="w-full border-2 border-gray-300 rounded-lg overflow-hidden">
@@ -287,36 +294,37 @@ const NewsCard = ({
   );
 };
 
+// Update the programCards array with image paths
 const programCards = [
   {
-    image: "RUBBER",
+    image: "/home/Rubber_unit.jpg",
     title: "RUBBER",
-    description: "Learn essential daily living skills including personal hygiene, meal preparation, and household management in a supportive environment."
+    description: "The Rubber Unit, a collaboration between Shaurya Foundation Trust and Rubson Polymers, empowers neurodiverse individuals to gain hands-on experience in the automotive sector. Trainees actively participate in peeling and popping rubber components, fostering independence and skill development for future employment."
   },
   {
-    image: "PACKAGING",
+    image: "/home/Packaging.jpg",
     title: "PACKAGING",
-    description: "Develop money management skills, budgeting, and understanding financial responsibilities for independent living."
+    description: "In partnership with Nippon Maruti, the Packaging Panthers unit provides neurodiverse individuals with essential skills in folding, filling, and packing waxing kit boxes. This collaborative effort not only enhances their employability but also instills a sense of accomplishment and teamwork among trainees."
   },
   {
-    image: "SAGAR RATNA",
+    image: "/home/Sagar Ratna.jpg",
     title: "SAGAR RATNA",
-    description: "Hands-on training in various vocational fields to develop marketable skills for meaningful employment opportunities."
+    description: "Sagar Ratna represents Shaurya Foundation Trust's collaboration with Sagar Ratna, currently operational at Delhi High Court and Mathura Road. This initiative offers neurodiverse individuals opportunities to engage in meaningful work, enhancing their skills while contributing to a supportive community environment."
   },
   {
-    image: "SATA VIKAS",
-    title: "SATA VIKAS",
-    description: "One-on-one coaching and support to help individuals succeed in their workplace and develop career advancement skills."
+    image: "/home/Sata Vikas.jpg",
+    title: "VIKAS GROUP",
+    description: "The Vikas Group initiative helps neurodiverse trainees integrate into traditional work environments, focusing on tasks like checking, cleaning, and packaging automobile parts. This program fosters job skills, social interactions, and teamwork, promoting independence and future employment opportunities."
   },
   {
-    image: "HOSTEL",
+    image: "/home/Hostel2.jpg",
     title: "HOSTEL",
-    description: "Assistance with finding suitable employment opportunities that match individual skills, interests, and abilities."
+    description: "Our hostel provides a nurturing, home-like environment with both 3-shared and 2-shared dorms. Equipped with essential facilities such as a lunch area and entertainment zone, we ensure that residents enjoy a comfortable space conducive to learning and personal growth."
   },
   {
-    image: "DAY-BOARDING",
+    image: "/home/Day boarding.jpg",
     title: "DAY-BOARDING",
-    description: "Ongoing support and accommodations to ensure success and satisfaction in open employment settings."
+    description: "Shaurya Foundation Trust offers day-boarding training alongside Independent Living Program (ILP). Trainees can develop basic skills while gaining practical experience, enabling them to earn as a side hustle. This program fosters independence and prepares them for future employment opportunities."
   }
 ];
 
