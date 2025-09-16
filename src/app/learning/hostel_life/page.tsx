@@ -4,6 +4,17 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+// Add this custom hook at the top of your file
+const useIsClient = () => {
+  const [isClient, setIsClient] = useState(false);
+  
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  
+  return isClient;
+};
+
 export default function HostelLife() {
   const [isWide, setIsWide] = useState(false);
   const [skillLayout, setSkillLayout] = useState("grid-cols-4");
@@ -111,45 +122,49 @@ export default function HostelLife() {
   }, []);
 
   // Flip Card Component
-  const FlipCard = ({ 
-    image, 
-    title, 
-    description,
-    index 
-  }: { 
-    image: string; 
-    title: string; 
-    description: string;
-    index: number;
-  }) => {
-    return (
-      <div 
-        className={`group perspective w-[300px] h-[250px] mx-auto flip-card ${window.innerWidth < 768 ? 'cursor-pointer' : ''}`}
-        onClick={() => window.innerWidth < 768 && handleCardClick(index)}
-      >
-        <div className={`relative preserve-3d w-full h-full ${window.innerWidth >= 768 ? 'group-hover:rotate-y-180' : ''} ${flippedCard === index ? 'rotate-y-180' : ''}`}>
-          {/* Front of card */}
-          <div className="absolute backface-hidden w-full h-full border-2 border-gray-300 rounded-lg overflow-hidden">
-            <div className="h-[200px] w-full bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-600">{image}</span>
-            </div>
-            <div className="h-[50px] flex items-center justify-center" style={{ backgroundColor: yellowColor }}>
-              <span className="text-xl font-bold text-black">{title}</span>
-            </div>
+ // Flip Card Component
+const FlipCard = ({ 
+  image, 
+  title, 
+  description,
+  index 
+}: { 
+  image: string; 
+  title: string; 
+  description: string;
+  index: number;
+}) => {
+  const isClient = useIsClient();
+  const isMobile = isClient ? window.innerWidth < 768 : false;
+  
+  return (
+    <div 
+      className={`group perspective w-[300px] h-[250px] mx-auto flip-card ${isMobile ? 'cursor-pointer' : ''}`}
+      onClick={() => isMobile && handleCardClick(index)}
+    >
+      <div className={`relative preserve-3d w-full h-full ${!isMobile ? 'group-hover:rotate-y-180' : ''} ${flippedCard === index ? 'rotate-y-180' : ''}`}>
+        {/* Front of card */}
+        <div className="absolute backface-hidden w-full h-full border-2 border-gray-300 rounded-lg overflow-hidden">
+          <div className="h-[200px] w-full bg-gray-200 flex items-center justify-center">
+            <span className="text-gray-600">{image}</span>
           </div>
-          
-          {/* Back of card */}
-          <div className="absolute rotate-y-180 backface-hidden w-full h-full border-2 border-gray-300 rounded-lg overflow-hidden" style={{ backgroundColor: yellowColor }}>
-            <div className="w-full h-full flex items-center justify-center p-4">
-              <p className="text-center text-black font-bold text-xl">
-                {description}
-              </p>
-            </div>
+          <div className="h-[50px] flex items-center justify-center" style={{ backgroundColor: yellowColor }}>
+            <span className="text-xl font-bold text-black">{title}</span>
+          </div>
+        </div>
+        
+        {/* Back of card */}
+        <div className="absolute rotate-y-180 backface-hidden w-full h-full border-2 border-gray-300 rounded-lg overflow-hidden" style={{ backgroundColor: yellowColor }}>
+          <div className="w-full h-full flex items-center justify-center p-4">
+            <p className="text-center text-black font-bold text-xl">
+              {description}
+            </p>
           </div>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
   
   const skills = [
     "Physical Environment",
@@ -166,6 +181,9 @@ export default function HostelLife() {
 
   // Function to render skill boxes with proper layout
   const renderSkillBoxes = () => {
+    const isClient = useIsClient();
+    if (!isClient) return null;
+
     const width = window.innerWidth;
     
     if (width >= 1200) {

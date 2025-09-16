@@ -499,36 +499,36 @@ useEffect(() => {
 )}
 
     {[
-      { id: "firstName", label: "First Name", type: "text" },
-      { id: "lastName", label: "Last Name", type: "text" },
-      { id: "email", label: "Email", type: "email" },
-      { id: "graduationYear", label: "Graduation Year", type: "number" },
-    ].map(({ id, label, type }) => (
-      <div key={id} className="w-full flex flex-col items-center">
-        <label
-          htmlFor={`${id}-mobile`}
-          className="mb-1 text-center text-base font-medium"
-          style={{ color: yellowColor }}
-        >
-          {label}
-        </label>
-        <input
-          type={type}
-          id={`${id}-mobile`}
-          name={id}
-          value={formData[id]}
-          onChange={handleChange}
-          className="p-1.5 rounded text-white"
-          style={{
-            backgroundColor: blueColor,
-            border: "2px solid white",
-            width: "75vw",
-            height: "32px",
-          }}
-          required
-        />
-      </div>
-    ))}
+  { id: "firstName", label: "First Name", type: "text" },
+  { id: "lastName", label: "Last Name", type: "text" },
+  { id: "email", label: "Email", type: "email" },
+  { id: "graduationYear", label: "Graduation Year", type: "number" },
+].map(({ id, label, type }) => (
+  <div key={id} className="w-full flex flex-col items-center">
+    <label
+      htmlFor={`${id}-mobile`}
+      className="mb-1 text-center text-base font-medium"
+      style={{ color: yellowColor }}
+    >
+      {label}
+    </label>
+    <input
+      type={type}
+      id={`${id}-mobile`}
+      name={id}
+      value={formData[id as keyof typeof formData]} // ← FIXED LINE
+      onChange={handleChange}
+      className="p-1.5 rounded text-white"
+      style={{
+        backgroundColor: blueColor,
+        border: "2px solid white",
+        width: "75vw",
+        height: "32px",
+      }}
+      required
+    />
+  </div>
+))}
 
     <div className="w-full flex flex-col items-center">
       <label

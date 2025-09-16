@@ -97,38 +97,40 @@ export default function Visit() {
               {/* Button */}
               <div className="h-[5vh] flex items-center">
                 <button 
-                  className="flex items-center justify-center font-bold transition-all duration-300"
-                  style={{ 
-                    width: '300px', 
-                    height: '40px',
-                    backgroundColor: blueColor,
-                    border: `1px solid ${blueColor}`,
-                    color: yellowColor
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = 'transparent';
-                    e.target.style.color = blueColor;
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.backgroundColor = blueColor;
-                    e.target.style.color = yellowColor;
-                  }}
-                >
-                  BOOK A CAMPUS TOUR
-                </button>
+  className="flex items-center justify-center font-bold transition-all duration-300"
+  style={{ 
+    width: '300px', 
+    height: '40px',
+    backgroundColor: blueColor,
+    border: `1px solid ${blueColor}`,
+    color: yellowColor
+  }}
+  onMouseEnter={(e) => {
+    const target = e.target as HTMLElement;
+    target.style.backgroundColor = 'transparent';
+    target.style.color = blueColor;
+  }}
+  onMouseLeave={(e) => {
+    const target = e.target as HTMLElement;
+    target.style.backgroundColor = blueColor;
+    target.style.color = yellowColor;
+  }}
+>
+  BOOK A CAMPUS TOUR
+</button>
               </div>
               
               {/* Google Map */}
               <div className="h-[50vh] w-full mt-[20px] pr-[20px]">
                 <iframe
-                  src="https://maps.google.com/maps?q=40.7069,-74.0113&z=15&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+  src="https://maps.google.com/maps?q=40.7069,-74.0113&z=15&output=embed"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+></iframe>
               </div>
             </div>
           </div>
@@ -274,38 +276,40 @@ Parent Inquiries</div>
           {/* Button */}
           <div className="h-[10vh] flex items-center justify-center">
             <button 
-              className="flex items-center justify-center font-bold transition-all duration-300"
-              style={{ 
-                width: '300px', 
-                height: '40px',
-                backgroundColor: blueColor,
-                border: `1px solid ${blueColor}`,
-                color: yellowColor
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = 'transparent';
-                e.target.style.color = blueColor;
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = blueColor;
-                e.target.style.color = yellowColor;
-              }}
-            >
-              BOOK A CAMPUS TOUR
-            </button>
+  className="flex items-center justify-center font-bold transition-all duration-300"
+  style={{ 
+    width: '300px', 
+    height: '40px',
+    backgroundColor: blueColor,
+    border: `1px solid ${blueColor}`,
+    color: yellowColor
+  }}
+  onMouseEnter={(e) => {
+    const target = e.target as HTMLElement;
+    target.style.backgroundColor = 'transparent';
+    target.style.color = blueColor;
+  }}
+  onMouseLeave={(e) => {
+    const target = e.target as HTMLElement;
+    target.style.backgroundColor = blueColor;
+    target.style.color = yellowColor;
+  }}
+>
+  BOOK A CAMPUS TOUR
+</button>
           </div>
           
           {/* Google Map */}
           <div className="h-[60vh] w-full">
             <iframe
-              src="https://maps.google.com/maps?q=40.7069,-74.0113&z=15&output=embed"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+  src="https://maps.google.com/maps?q=40.7069,-74.0113&z=15&output=embed"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+></iframe>
           </div>
         </div>
         <br/><br/>
