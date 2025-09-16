@@ -92,20 +92,21 @@ const TabComponent = () => {
   return (
     <div className="w-full border-2 border-gray-300 rounded-lg overflow-hidden">
       {/* Desktop Layout */}
-      <div className="hidden lg:flex w-full h-[600px]">
+      <div className="hidden lg:flex w-full h-[650px]">
         {/* Left Section (20% width) - Arrow and buttons */}
 <div className="w-1/5 flex flex-col border-r-2 border-gray-300 pt-[10px]">
   {/* Bottom 80% height - 5 buttons */}
+  {/*{ src: "/home/register now.png", label: "REGISTER NOW" },*/}
   <div className="h-4/5 flex flex-col justify-between items-center py-4">
     {[
-      { src: "/home/ilp.png", label: "ILP" },
-      { src: "/home/workunit.png", label: "WORK UNIT" },
-      { src: "/home/hostel.png", label: "HOSTEL" },
-      { src: "/home/dsw.png", label: "DSW TRAINING" },
-      { src: "/home/register.png", label: "REGISTER" },
+      { src: "/home/ILP.jpg", label: "ILP" },
+      { src: "/home/Work unit.jpg", label: "WORK UNIT" },
+      { src: "/home/Hostel.jpg", label: "HOSTEL" },
+      { src: "/home/DSW logo.JPG", label: "DSW TRAINING" },
+   
     ].map(({ src, label }) => (
       <div key={label} className="text-center">
-        <div className="w-[65px] h-[65px] mx-auto rounded-lg mb-2 overflow-hidden relative">
+        <div className="w-[100px] h-[100px] mx-auto rounded-lg mb-2 overflow-hidden relative">
           <Image
             src={src}
             alt={label}
@@ -172,9 +173,9 @@ const TabComponent = () => {
         {/* Middle 20% height - Three buttons */}
         <div className="h-1/5 min-h-[100px] flex justify-around items-center p-4 border-b-2 border-gray-300">
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto rounded-lg mb-2 overflow-hidden relative">
+            <div className="w-24 h-16 mx-auto rounded-lg mb-2 overflow-hidden relative">
               <Image
-                src="/home/ilp.png"
+                src="/home/ILP.jpg"
                 alt="ILP"
                 fill
                 className="object-cover"
@@ -183,9 +184,9 @@ const TabComponent = () => {
             <span className="text-sm font-medium">ILP</span>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto rounded-lg mb-2 overflow-hidden relative">
+            <div className="w-24 h-16 mx-auto rounded-lg mb-2 overflow-hidden relative">
               <Image
-                src="/home/workunit.png"
+                src="/home/Work unit.jpg"
                 alt="WORK UNIT"
                 fill
                 className="object-cover"
@@ -194,9 +195,9 @@ const TabComponent = () => {
             <span className="text-sm font-medium">WORK UNIT</span>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto rounded-lg mb-2 overflow-hidden relative">
+            <div className="w-24 h-16 mx-auto rounded-lg mb-2 overflow-hidden relative">
               <Image
-                src="/home/hostel.png"
+                src="/home/Hostel.jpg"
                 alt="HOSTEL"
                 fill
                 className="object-cover"
@@ -205,9 +206,9 @@ const TabComponent = () => {
             <span className="text-sm font-medium">HOSTEL</span>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto rounded-lg mb-2 overflow-hidden relative">
+            <div className="w-24 h-16 mx-auto rounded-lg mb-2 overflow-hidden relative">
               <Image
-                src="/home/DWS.png"
+                src="/home/DSW logo.JPG"
                 alt="DWS"
                 fill
                 className="object-cover"
@@ -215,6 +216,7 @@ const TabComponent = () => {
             </div>
             <span className="text-sm font-medium">DWS Training</span>
           </div>
+          {/*
           <div className="text-center">
             <div className="w-16 h-16 mx-auto rounded-lg mb-2 overflow-hidden relative">
               <Image
@@ -226,6 +228,7 @@ const TabComponent = () => {
             </div>
             <span className="text-sm font-medium">Register</span>
           </div>
+          */}
         </div>
 
         {/* Bottom 60% height - Divided into two sections without border */}
@@ -267,7 +270,7 @@ const TabComponent = () => {
 };
 
 
-
+{/*
 const NewsCard = ({
   date,
   headline,
@@ -293,6 +296,8 @@ const NewsCard = ({
     </div>
   );
 };
+*/}
+
 
 // Update the programCards array with image paths
 const programCards = [
@@ -442,7 +447,40 @@ const ProgramCardsSection = () => {
   );
 };
 
-// News Section Component
+const NewsCard = ({
+  date,
+  headline,
+  content,
+  link // Add a new prop for the link
+}: {
+  date: string;
+  headline: string;
+  content: string;
+  link: string; // Add link prop type definition
+}) => {
+  return (
+    <div className="border rounded-lg overflow-hidden shadow-md bg-white h-full flex flex-col">
+      <div className="p-4 flex flex-col flex-grow">
+        <div className="text-gray-500 text-sm mb-3">{date}</div>
+        <div className="w-full h-px bg-gray-200 mb-4"></div>
+        <h3 className="font-bold text-lg mb-3">{headline}</h3>
+        <p className="text-gray-700 mb-4 flex-grow">{content}</p>
+        <div className="mt-auto">
+          <a 
+            href={link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Update the NewsSection component to include links
 const NewsSection = () => {
   return (
     <section className="py-20 bg-gray-50">
@@ -459,21 +497,24 @@ const NewsSection = () => {
         {/* News Cards Grid - Simple 1x3 or 3x1 layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <NewsCard
-            date="Monday 1 January 2024"
-            headline="New Vocational Training Program Launched"
-            content="We are excited to announce the launch of our new vocational training program designed to provide practical skills for individuals with special needs to enter the workforce."
+            date="Friday 16 May 2025"
+            headline="The Changemakers: Inspiring Leaders Shaping The Future In 2025"
+            content="Arpita Yadav with 23 years of experience; is a dedicated advocate for neurodiversity and empowerment, currently serving as the Director of the Shaurya Foundation Trust in Palwal. She rose to national prominence as a contestant on Kaun Banega Crorepati, where she effectively raised awareness…"
+            link="https://www.businessworld.in/article/the-changemakers-inspiring-leaders-shaping-the-future-in-2025-556911"
           />
           
           <NewsCard
-            date="Friday 15 December 2023"
-            headline="Annual Community Integration Event Success"
-            content="Our annual community integration event was a tremendous success with record participation. The event focused on building connections and fostering understanding."
+            date="Wednesday 11 September 2024"
+            headline="Warm & sweet: Delhi HC cafe serves diversity dessert with paycheque"
+            content="Its 10 neurodiverse staff members had collectively reached a milestone about a month afterCJI DY Chandrachud had opened the cafe. On Tuesday, they got their first paycheques from acting chief justice Manmohan."
+            link="https://timesofindia.indiatimes.com/city/delhi/warm-sweet-delhi-hc-cafe-serves-diversity-dessert-with-paycheque/articleshow/113254900.cms#"
           />
           
           <NewsCard
-            date="Wednesday 1 November 2023"
-            headline="Partnership with Local Businesses"
-            content="We've established new partnerships with several local businesses to create more employment opportunities for our program participants."
+            date="Wednesday 11 September 2024"
+            headline="Neurodivergent staff run the show at this new Delhi HC café."
+            content="On stepping inside the café, visitors are greeted by a warm and charming Arunima Bhaduri, who manages a kiosk of a non-profit, Shaurya Foundation Trust, at Sagar Express. Hand-made paintings, coasters, brownies, cookies, mugs, and water bottles made by neurodivergent persons"
+            link="https://theprint.in/judiciary/neurodivergent-staff-run-the-show-at-this-new-delhi-hc-cafe-its-fast-becoming-lawyers-favourite-haunt/2260679/"
           />
         </div>
       </div>
