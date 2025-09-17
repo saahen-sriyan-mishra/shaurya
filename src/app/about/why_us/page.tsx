@@ -430,7 +430,7 @@ useEffect(() => {
           {/* Top 15% */}
           <div className="w-full h-[15%] flex items-center bg-white p-4">
             <span style={{ color: blueColor }} className="text-3xl font-bold mr-2">→</span>
-            <h1 style={{ color: blueColor }} className="text-3xl font-bold">Connect With Us</h1>
+            <h1 style={{ color: blueColor }} className="text-3xl font-bold">Why Us</h1>
           </div>
 
           {/* Upper Middle 15% */}
@@ -474,7 +474,7 @@ useEffect(() => {
         {/* First additional mobile section - Fixed fragment */}
         <div className="w-full h-[15vh] flex items-center bg-white p-4">
           <span style={{ color: blueColor }} className="text-3xl font-bold mr-2">→</span>
-          <h1 style={{ color: blueColor }} className="text-3xl font-bold">Our Center</h1>
+          <h1 style={{ color: blueColor }} className="text-3xl font-bold">Connect With Us</h1>
         </div>
 
         <div

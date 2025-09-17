@@ -51,9 +51,9 @@ export default function OurCenter() {
 
 <div
   style={{ backgroundColor: blueColor }}
-  className="w-[43%] flex items-center justify-center"
+  className="w-[43%] flex items-center justify-center p-4"
 >
-  <div className="relative w-[450px] h-[450px]">
+  <div className="relative w-[450px] h-[450px] ">
     <Image
       src="/home/Our centre.jpg"
       alt="OUR CENTER"
@@ -117,11 +117,11 @@ export default function OurCenter() {
             <div className="w-[7%]"></div>
             <div
   style={{ backgroundColor: blueColor }}
-  className="w-[43%] flex items-center justify-center"
+  className="w-[43%] flex items-center justify-center p-4"
 >
-  <div className="relative w-[300px] h-[300px]">
+  <div className="relative w-[450px] h-[450px]">
     <Image
-      src="/about/mission.png"
+      src="/Home/Mission and vision.jpg"
       alt="MISSION AND VISION"
       fill
       className="object-cover rounded-md"
@@ -181,11 +181,11 @@ export default function OurCenter() {
 
 <div
   style={{ backgroundColor: blueColor }}
-  className="w-full h-[35%] flex items-center justify-center"
+  className="w-full h-[35%] flex items-center justify-center p-4"
 >
   <div className="relative w-[300px] h-[300px]">
     <Image
-      src="/home/Our centre.jpg" // Maps to public/home/workunit.png
+      src="/home/Our centre.jpg" 
       alt="OUR CENTER"
       fill
       className="object-cover rounded-md"
@@ -230,11 +230,11 @@ export default function OurCenter() {
           {/* Lower Middle 35% */}
           <div
   style={{ backgroundColor: blueColor }}
-  className="w-full h-[35%] flex items-center justify-center"
+  className="w-full h-[35%] flex items-center justify-center p-4"
 >
   <div className="relative w-[300px] h-[300px]">
     <Image
-      src="/about/mission.png" // Maps to public/home/workunit.png
+      src="/Home/Mission and vision.jpg"
       alt="MISSION AND VISION"
       fill
       className="object-cover rounded-md"
