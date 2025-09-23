@@ -114,9 +114,9 @@ export default function RequestInfo() {
 
   const educationLevels = [
     'High School',
+    'Diploma',
     'Undergraduate',
-    'Graduate',
-    'Doctorate'
+    'Graduate'
   ];
 
   // Custom styles for the phone input
@@ -673,7 +673,7 @@ export default function RequestInfo() {
 
   return (
     <div className="min-h-screen w-full flex flex-col">
-      <div className={isWide ? "w-[95%] mx-auto" : ""}>
+      <div className={isWide ? "w-[100%] mx-auto" : ""}>
         {centerSection}
       </div>
     </div>

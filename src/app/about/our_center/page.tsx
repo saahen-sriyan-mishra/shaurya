@@ -121,7 +121,7 @@ export default function OurCenter() {
 >
   <div className="relative w-[450px] h-[450px]">
     <Image
-      src="/Home/Mission and vision.jpg"
+      src="/home/Mission and vision.jpg"
       alt="MISSION AND VISION"
       fill
       className="object-cover rounded-md"
@@ -234,7 +234,7 @@ export default function OurCenter() {
 >
   <div className="relative w-[300px] h-[300px]">
     <Image
-      src="/Home/Mission and vision.jpg"
+      src="/home/Mission and vision.jpg"
       alt="MISSION AND VISION"
       fill
       className="object-cover rounded-md"
@@ -268,7 +268,7 @@ export default function OurCenter() {
 
   return (
     <div className="min-h-screen w-full flex flex-col">
-      <div className={isWide ? "w-[95%] mx-auto" : ""}>
+      <div className={isWide ? "w-[100%] mx-auto" : ""}>
         {content}
       </div>
     </div>

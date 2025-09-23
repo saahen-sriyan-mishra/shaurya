@@ -26,7 +26,8 @@ export default function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#2C438A] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#2C438A] rounded-full flex items-center justify-center">
+
                 <Image
                   src="/logo2.png"
                   alt="Shaurya Logo"
@@ -104,7 +105,7 @@ export default function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               href="/contact"
-              className="bg-[#2C438A] hover:bg-[#2C438A]/90 text-sm text-white px-5 py-2 rounded-full"
+              className="bg-[#2C438A] hover:bg-[#2C438A]/90 text-sm text-white px-5 py-2"
             >
               Contact Now →
             </Link>
@@ -120,8 +121,8 @@ export default function Header() {
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center gap-3" onClick={closeMobileMenu}>
-                <div className="w-10 h-10 bg-[#2C438A] rounded-lg flex items-center justify-center">
-                  <Image src="/logo2.png" alt="Shaurya Logo" width={24} height={24} className="brightness-0 invert mix-blend-difference" />
+                <div className="w-12 h-12 bg-[#2C438A] rounded-full flex items-center justify-center">
+                  <Image src="/logo2.png" alt="Shaurya Logo" width={40} height={40} className="brightness-0 invert mix-blend-difference" />
                 </div>
                 <span className="text-[#2C438A] text-xl font-bold">Shaurya</span>
               </Link>
@@ -199,7 +200,7 @@ export default function Header() {
                 </div>
 
                 <div className="py-6">
-                  <Link href="/contact" onClick={closeMobileMenu} className="block w-full bg-[#2C438A] hover:bg-[#2C438A]/90 text-sm text-white px-5 py-2 rounded-full text-center">
+                  <Link href="/contact" onClick={closeMobileMenu} className="block w-full bg-[#2C438A] hover:bg-[#2C438A]/90 text-sm text-white px-5 py-2 text-center">
                     Contact Now →
                   </Link>
                 </div>

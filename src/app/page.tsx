@@ -90,62 +90,78 @@ const FlipCard = ({
 // Tab Component
 const TabComponent = () => {
   return (
-    <div className="w-full border-2 border-gray-300 rounded-lg overflow-hidden">
+    <div className="w-full overflow-hidden">
       {/* Desktop Layout */}
       <div className="hidden lg:flex w-full h-[650px]">
         {/* Left Section (20% width) - Arrow and buttons */}
-<div className="w-1/5 flex flex-col border-r-2 border-gray-300 pt-[10px]">
-  {/* Bottom 80% height - 5 buttons */}
-  {/*{ src: "/home/register now.png", label: "REGISTER NOW" },*/}
-  <div className="h-4/5 flex flex-col items-center py-4">
-  {[
-    { src: "/home/ILP.jpg", label: "ILP" },
-    { src: "/home/Work unit.jpg", label: "WORK UNIT" },
-    { src: "/home/Hostel.jpg", label: "HOSTEL" },
-    { src: "/home/DSW logo.JPG", label: "DSW TRAINING" },
-  ].map(({ src, label }) => (
-    <div key={label} className="flex-1 w-full flex flex-col justify-center items-center">
-      <div className="w-[100px] h-[100px] relative mb-2">
-        <Image
-          src={src}
-          alt={label}
-          fill
-          className="object-fill"
-        />
-      </div>
-      <span className="text-sm font-medium mt-1">{label}</span>
-    </div>
-  ))}
-</div>
-
-</div>
+        <div className="w-1/5 flex flex-col pt-[10px]">
+          {/* Bottom 80% height - 5 buttons */}
+          <div className="h-4/5 flex flex-col items-center py-4">
+            {[
+              { src: "/home/ILP.jpg", label: "ILP" },
+              { src: "/home/Work unit.jpg", label: "WORK UNIT" },
+              { src: "/home/Hostel.jpg", label: "HOSTEL" },
+              { src: "/home/DSW logo.JPG", label: "DSW TRAINING" },
+            ].map(({ src, label }) => (
+              <div key={label} className="flex-1 w-full flex flex-col justify-center items-center">
+                <div className="w-[100px] h-[100px] relative mb-2">
+                  <Image
+                    src={src}
+                    alt={label}
+                    fill
+                    className="object-fill"
+                  />
+                </div>
+                <span className="text-sm font-medium mt-1 text-[#3f51b5]">{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Right Section (80% width) */}
         <div className="w-4/5 flex flex-col">
           {/* Top 20% height - Welcome text */}
-          <div className="h-1/5 flex items-center pl-6 border-b-2 border-gray-300">
-            <h1 className="text-4xl font-bold text-blue-600">Welcome to Shaurya Foundation Trust</h1>
+          <div className="h-1/5 flex items-center pl-6" style={{ backgroundColor: '#3f51b5' }}>
+            <h1 className="text-4xl font-bold text-white">Welcome to Shaurya Foundation Trust</h1>
           </div>
 
           {/* Bottom 80% height - Divided into two sections without border */}
           <div className="h-4/5 flex">
             {/* Left 50% - About us text */}
-            <div className="w-1/2 p-6 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-4">What are we</h2>
-              <p className="text-gray-700 mb-6 text-justify">
+            <div className="w-1/2 p-6 flex flex-col justify-center" style={{ backgroundColor: '#f8d287' }}>
+              <h2 className="text-3xl font-bold mb-4 text-[#3f51b5]">What are we</h2>
+              <p className="text-[#3f51b5] mb-6 text-justify">
                 Empowering Neurodiversity: Building Skills for a Brighter Future <br/><br/>
                 Shaurya Foundation Trust is a non-profit organization dedicated to empowering neurodiverse individuals. We provide training in life skills, employment readiness, and independent living, working closely with individuals and families to foster self-confidence and independence. By advocating for neurodiversity and creating an inclusive environment, we aim to change perceptions and build a supportive community where everyone can thrive.
               </p>
               <Link
-                href="/about/our_center"
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors w-fit"
-              >
-                Learn More
-              </Link>
+  href="/about/our_center"
+  className="px-6 py-3 rounded-lg transition-colors w-fit border"
+  style={{ 
+    backgroundColor: '#3f51b5', 
+    borderColor: '#f8d287',
+    borderWidth: '1px',
+    color: '#f8d287'
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = 'transparent';
+    e.currentTarget.style.color = '#3f51b5';
+    e.currentTarget.style.borderColor = '#3f51b5';
+    e.currentTarget.style.borderWidth = '1px';
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = '#3f51b5';
+    e.currentTarget.style.color = '#f8d287';
+    e.currentTarget.style.borderColor = '#f8d287';
+    e.currentTarget.style.borderWidth = '1px';
+  }}
+>
+  Learn More
+</Link>
             </div>
 
             {/* Right 50% - Video */}
-            <div className="w-1/2 flex items-center justify-center p-6">
+            <div className="w-1/2 flex items-center justify-center p-6" style={{ backgroundColor: '#f8d287' }}>
               <div className="w-full h-full flex items-center justify-center">
                 <div className="w-[310px] h-[450px] rounded-lg overflow-hidden flex items-center justify-center">
                   <video
@@ -163,142 +179,132 @@ const TabComponent = () => {
         </div>
       </div>
 
-{/* Mobile Layout */}
-<div className="lg:hidden w-full flex flex-col border-2 border-gray-300 rounded-lg">
-  {/* Top 20% height - Welcome text */}
-  <div className="h-1/5 min-h-[100px] flex items-center justify-center p-4 border-b-2 border-gray-300">
-    <h1 className="text-4xl font-bold text-blue-600 text-center">Welcome to Shaurya Foundation Trust</h1>
-  </div>
+      {/* Mobile Layout */}
+      <div className="lg:hidden w-full flex flex-col">
+        {/* Top 20% height - Welcome text */}
+        <div className="min-h-[100px] flex items-center justify-center p-4" style={{ backgroundColor: '#3f51b5' }}>
+          <h1 className="text-3xl font-bold text-white text-center">Welcome to Shaurya Foundation Trust</h1>
+        </div>
 
-  {/* Middle section - Four buttons in 2x2 grid */}
-  <div className="min-h-[200px] p-4 border-b-2 border-gray-300">
-    <div className="grid grid-cols-2 gap-4">
-      {/* Row 1 */}
-      <div className="flex justify-center">
-        <div className="text-center">
-          <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
-            <Image
-              src="/home/ILP.jpg"
-              alt="ILP"
-              fill
-              className="object-cover"
-            />
+        {/* Middle section - Four buttons in 2x2 grid */}
+        <div className="min-h-[200px] p-4">
+          <div className="grid grid-cols-2 gap-4">
+            {/* Row 1 */}
+            <div className="flex justify-center">
+              <div className="text-center">
+                <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
+                  <Image
+                    src="/home/ILP.jpg"
+                    alt="ILP"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <span className="text-sm font-medium text-[#3f51b5]">ILP</span>
+              </div>
+            </div>
+            
+            <div className="flex justify-center">
+              <div className="text-center">
+                <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
+                  <Image
+                    src="/home/Work unit.jpg"
+                    alt="WORK UNIT"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <span className="text-sm font-medium text-[#3f51b5]">WORK UNIT</span>
+              </div>
+            </div>
+            
+            {/* Row 2 */}
+            <div className="flex justify-center">
+              <div className="text-center">
+                <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
+                  <Image
+                    src="/home/Hostel.jpg"
+                    alt="HOSTEL"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <span className="text-sm font-medium text-[#3f51b5]">HOSTEL</span>
+              </div>
+            </div>
+            
+            <div className="flex justify-center">
+              <div className="text-center">
+                <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
+                  <Image
+                    src="/home/DSW logo.JPG"
+                    alt="DWS"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <span className="text-sm font-medium text-[#3f51b5]">DWS Training</span>
+              </div>
+            </div>
           </div>
-          <span className="text-sm font-medium">ILP</span>
         </div>
-      </div>
-      
-      <div className="flex justify-center">
-        <div className="text-center">
-          <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
-            <Image
-              src="/home/Work unit.jpg"
-              alt="WORK UNIT"
-              fill
-              className="object-cover"
-            />
+
+        {/* Bottom 60% height - Divided into two sections without border */}
+        <div className="flex flex-col">
+          {/* Top 50% - About us text */}
+          <div className="p-6 flex flex-col justify-center items-center" style={{ backgroundColor: '#f8d287' }}>
+            <h2 className="text-2xl font-bold mb-4 text-center text-[#3f51b5]">What are we</h2>
+            <p className="text-[#3f51b5] mb-6 text-justify">
+              Empowering Neurodiversity: Building Skills for a Brighter Future <br/><br/>
+              Shaurya Foundation Trust is a non-profit organization dedicated to empowering neurodiverse individuals. We provide training in life skills, employment readiness, and independent living, working closely with individuals and families to foster self-confidence and independence. By advocating for neurodiversity and creating an inclusive environment, we aim to change perceptions and build a supportive community where everyone can thrive.
+            </p>
+            <Link
+  href="/about/our_center"
+  className="px-6 py-3 rounded-lg transition-colors w-fit border"
+  style={{ 
+    backgroundColor: '#3f51b5', 
+    borderColor: '#f8d287',
+    borderWidth: '1px',
+    color: '#f8d287'
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = 'transparent';
+    e.currentTarget.style.color = '#3f51b5';
+    e.currentTarget.style.borderColor = '#3f51b5';
+    e.currentTarget.style.borderWidth = '1px';
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = '#3f51b5';
+    e.currentTarget.style.color = '#f8d287';
+    e.currentTarget.style.borderColor = '#f8d287';
+    e.currentTarget.style.borderWidth = '1px';
+  }}
+>
+  Learn More
+</Link>
           </div>
-          <span className="text-sm font-medium">WORK UNIT</span>
-        </div>
-      </div>
-      
-      {/* Row 2 */}
-      <div className="flex justify-center">
-        <div className="text-center">
-          <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
-            <Image
-              src="/home/Hostel.jpg"
-              alt="HOSTEL"
-              fill
-              className="object-cover"
-            />
+
+          {/* Bottom 50% - Video */}
+          <div className="p-6 flex items-center justify-center" style={{ backgroundColor: '#f8d287' }}>
+            <div className="w-full flex items-center justify-center">
+              <div className="w-full max-w-[310px] h-[300px] rounded-lg overflow-hidden flex items-center justify-center">
+                <video
+                  src="/home/gif_loop.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
-          <span className="text-sm font-medium">HOSTEL</span>
-        </div>
-      </div>
-      
-      <div className="flex justify-center">
-        <div className="text-center">
-          <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
-            <Image
-              src="/home/DSW logo.JPG"
-              alt="DWS"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <span className="text-sm font-medium">DWS Training</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {/* Bottom 60% height - Divided into two sections without border */}
-  <div className="h-3/5 flex flex-col">
-    {/* Top 50% - About us text */}
-    <div className="h-1/2 p-6 flex flex-col justify-center items-center">
-      <h2 className="text-3xl font-bold mb-4 text-center">What are we</h2>
-      <p className="text-gray-700 mb-6 text-justify">
-        Empowering Neurodiversity: Building Skills for a Brighter Future <br/><br/>
-        Shaurya Foundation Trust is a non-profit organization dedicated to empowering neurodiverse individuals. We provide training in life skills, employment readiness, and independent living, working closely with individuals and families to foster self-confidence and independence. By advocating for neurodiversity and creating an inclusive environment, we aim to change perceptions and build a supportive community where everyone can thrive.
-      </p>
-      <Link
-          href="/about/our_center"
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors w-fit"
-        >
-          Learn More
-        </Link>
-    </div>
-
-    {/* Bottom 50% - Video */}
-    <div className="h-1/2 p-6 flex items-center justify-center">
-      <div className="w-full h-full flex items-center justify-center">
-        <div className="w-[310px] h-[500px] rounded-lg overflow-hidden flex items-center justify-center">
-          <video
-            src="/home/gif_loop.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-  );
-};
-
-
-{/*
-const NewsCard = ({
-  date,
-  headline,
-  content
-}: {
-  date: string;
-  headline: string;
-  content: string;
-}) => {
-  return (
-    <div className="border rounded-lg overflow-hidden shadow-md bg-white h-full flex flex-col">
-      <div className="p-4 flex flex-col flex-grow">
-        <div className="text-gray-500 text-sm mb-3">{date}</div>
-        <div className="w-full h-px bg-gray-200 mb-4"></div>
-        <h3 className="font-bold text-lg mb-3">{headline}</h3>
-        <p className="text-gray-700 mb-4 flex-grow">{content}</p>
-        <div className="mt-auto">
-          <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
-            Read More
-          </button>
         </div>
       </div>
     </div>
   );
 };
-*/}
+
 
 
 // Update the programCards array with image paths
@@ -411,10 +417,9 @@ const HeroScrollButton = () => {
 const InitiativesSection = () => {
   return (
     <section id="services" className="relative py-20 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Tab Component */}
         <TabComponent />
-      </div>
     </section>
   );
 };
@@ -571,6 +576,8 @@ export default function Home() {
       </div>
     </motion.div>
   </div>
+
+
 
   <div className="relative z-20 mt-[100vh]">
 

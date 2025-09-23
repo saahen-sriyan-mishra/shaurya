@@ -464,7 +464,7 @@ const FlipCard = ({
 
   return (
     <div className="min-h-screen w-full flex flex-col">
-      <div className={isWide ? "w-[95%] mx-auto" : ""}>
+      <div className={isWide ? "w-[100%] mx-auto" : ""}>
         {content}
       </div>
     </div>
