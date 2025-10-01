@@ -160,7 +160,7 @@ export default function Visit() {
         <div className="w-full flex flex-col">
           <div className="flex">
             <div className="w-[7%]"></div>
-            <div className="w-[93%] flex justify-between">
+            <div className="w-[90%] flex justify-between">
               {/* Box 1 */}
               <div 
                 className="flex flex-col items-center justify-center"
@@ -206,6 +206,7 @@ Parent Inquiries</div>
                 <div className="text-lg font-bold" style={{ color: blueColor }}>789</div>
               </div>
             </div>
+            <div className="w-[3%]"></div>
           </div>
         </div>
         <br/><br/>

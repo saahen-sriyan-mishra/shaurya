@@ -78,7 +78,7 @@ export default function Header() {
               </div>
             </div>
 
-            {/* ✅ New Learning Dropdown */}
+            {/* ✅ Updated Learning Dropdown with DWS Training */}
             <div className="relative group">
               <button className="text-sm/6 font-semibold text-gray-900 hover:text-[#2C438A]">
                 Learning
@@ -87,6 +87,7 @@ export default function Header() {
                 <Link href="/learning/programs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Programs</Link>
                 <Link href="/learning/after_hour" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">After Hour</Link>
                 <Link href="/learning/hostel_life" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Hostel Life</Link>
+                <Link href="/learning/dws" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">DWS Training</Link>
               </div>
             </div>
 
@@ -170,7 +171,7 @@ export default function Header() {
                     )}
                   </div>
 
-                  {/* ✅ Mobile Learning Dropdown */}
+                  {/* ✅ Updated Mobile Learning Dropdown with DWS Training */}
                   <div>
                     <button
                       onClick={() => setMobileLearningOpen(!mobileLearningOpen)}
@@ -184,6 +185,7 @@ export default function Header() {
                         <Link href="/learning/programs" onClick={closeMobileMenu} className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">Programs</Link>
                         <Link href="/learning/after_hour" onClick={closeMobileMenu} className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">After Hour</Link>
                         <Link href="/learning/hostel_life" onClick={closeMobileMenu} className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">Hostel Life</Link>
+                        <Link href="/learning/dws" onClick={closeMobileMenu} className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">DWS Training</Link>
                       </div>
                     )}
                   </div>

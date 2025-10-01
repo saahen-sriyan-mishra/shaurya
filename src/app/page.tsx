@@ -53,37 +53,43 @@ const FlipCard = ({
 }) => {
   return (
     <div className="group perspective w-72 h-[28rem] mx-auto flip-card">
-      <div className="relative preserve-3d w-full h-full">
-        {/* Front of card */}
-        <div className="absolute backface-hidden w-full h-full border rounded-lg overflow-hidden bg-white shadow-md flex flex-col">
-          {/* Image container - 90% height */}
-          <div className="h-[90%] w-full overflow-hidden">
-            <div className="w-full h-full bg-gray-300 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative">
-              <Image
-                src={image}
-                alt={title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-          </div>
-          
-          {/* Title container - remaining 10% height */}
-          <div className="h-[10%] p-4 flex items-center justify-center">
-            <h3 className="font-semibold text-lg mb-0 text-center">{title}</h3>
-          </div>
-        </div>
-        
-        {/* Back of card */}
-        <div className="absolute rotate-y-180 backface-hidden w-full h-full border rounded-lg overflow-hidden bg-white shadow-md">
-          <div className="h-full overflow-y-auto p-4">
-            <h3 className="font-semibold text-lg mb-3">{title}</h3>
-            <p className="text-gray-700">{description}</p>
-          </div>
+  <div className="relative preserve-3d w-full h-full">
+    {/* Front of card */}
+    <div className="absolute backface-hidden w-full h-full border overflow-hidden bg-white shadow-md flex flex-col">
+      {/* Image container - 90% height */}
+      <div className="h-[90%] w-full overflow-hidden">
+        <div className="w-full h-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
       </div>
+
+      {/* Title container - remaining 10% height */}
+      <div
+        className="h-[10%] p-4 flex items-center justify-center"
+        style={{ backgroundColor: '#3f51b5' }}
+      >
+        <h3 className="font-semibold text-lg mb-0 text-center text-white">{title}</h3>
+      </div>
     </div>
+
+    {/* Back of card */}
+    <div
+      className="absolute rotate-y-180 backface-hidden w-full h-full border overflow-hidden shadow-md"
+      style={{ backgroundColor: '#f8d287' }}
+    >
+      <div className="h-full overflow-y-auto p-4">
+        <h3 className="font-semibold text-lg mb-3 text-black">{title}</h3>
+        <p className="text-black">{description}</p>
+      </div>
+    </div>
+  </div>
+</div>
   );
 };
 
@@ -136,7 +142,7 @@ const TabComponent = () => {
               </p>
               <Link
   href="/about/our_center"
-  className="px-6 py-3 rounded-lg transition-colors w-fit border"
+  className="px-6 py-3 transition-colors w-fit border"
   style={{ 
     backgroundColor: '#3f51b5', 
     borderColor: '#f8d287',
@@ -163,7 +169,7 @@ const TabComponent = () => {
             {/* Right 50% - Video */}
             <div className="w-1/2 flex items-center justify-center p-6" style={{ backgroundColor: '#f8d287' }}>
               <div className="w-full h-full flex items-center justify-center">
-                <div className="w-[310px] h-[450px] rounded-lg overflow-hidden flex items-center justify-center">
+                <div className="w-[310px] h-[450px]  overflow-hidden flex items-center justify-center">
                   <video
                     src="/home/gif_loop.mp4"
                     autoPlay
@@ -260,7 +266,7 @@ const TabComponent = () => {
             </p>
             <Link
   href="/about/our_center"
-  className="px-6 py-3 rounded-lg transition-colors w-fit border"
+  className="px-6 py-3 transition-colors w-fit border"
   style={{ 
     backgroundColor: '#3f51b5', 
     borderColor: '#f8d287',
@@ -287,7 +293,7 @@ const TabComponent = () => {
           {/* Bottom 50% - Video */}
           <div className="p-6 flex items-center justify-center" style={{ backgroundColor: '#f8d287' }}>
             <div className="w-full flex items-center justify-center">
-              <div className="w-full max-w-[310px] h-[300px] rounded-lg overflow-hidden flex items-center justify-center">
+              <div className="w-full max-w-[310px] h-[450px] rounded-lg overflow-hidden flex items-center justify-center">
                 <video
                   src="/home/gif_loop.mp4"
                   autoPlay
@@ -466,21 +472,34 @@ const NewsCard = ({
   link: string; // Add link prop type definition
 }) => {
   return (
-    <div className="border rounded-lg overflow-hidden shadow-md bg-white h-full flex flex-col">
+    <div className="border overflow-hidden shadow-m h-full flex flex-col"
+    style={{ backgroundColor: '#f8d287' }}>
       <div className="p-4 flex flex-col flex-grow">
-        <div className="text-gray-500 text-sm mb-3">{date}</div>
-        <div className="w-full h-px bg-gray-200 mb-4"></div>
-        <h3 className="font-bold text-lg mb-3">{headline}</h3>
-        <p className="text-gray-700 mb-4 flex-grow">{content}</p>
-        <div className="mt-auto">
-          <a 
-            href={link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-          >
-            Read More
-          </a>
+        <div className="text-sm mb-3" style={{ color: '#3f51b5' }}>
+  {date}
+</div>
+
+<div className="w-full h-px bg-gray-500 mb-4"></div>
+
+<h3 className="font-bold text-lg mb-3">
+  {headline}
+</h3>
+
+<p className="mb-4 flex-grow" style={{ color: '#3f51b5' }}>
+  {content}
+</p>
+
+<div className="mt-auto">
+
+         <a
+  href={link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block px-4 py-2 text-white  transition-colors hover:opacity-90"
+  style={{ backgroundColor: '#3f51b5' }}
+>
+  Read More
+</a>
         </div>
       </div>
     </div>
@@ -506,7 +525,7 @@ const NewsSection = () => {
           <NewsCard
             date="Friday 16 May 2025"
             headline="The Changemakers: Inspiring Leaders Shaping The Future In 2025"
-            content="Arpita Yadav with 23 years of experience; is a dedicated advocate for neurodiversity and empowerment, currently serving as the Director of the Shaurya Foundation Trust in Palwal. She rose to national prominence as a contestant on Kaun Banega Crorepati, where she effectively raised awareness…"
+            content="Arpita Yadav with 23 years of experience; is a dedicated advocate for neurodiversity and empowerment, currently serving as the Director of the Shaurya Foundation Trust in Palwal. She rose to national prominence as a contestant on Kaun Banega Crorepati, where she effectively raised awareness."
             link="https://www.businessworld.in/article/the-changemakers-inspiring-leaders-shaping-the-future-in-2025-556911"
           />
           
@@ -520,7 +539,7 @@ const NewsSection = () => {
           <NewsCard
             date="Wednesday 11 September 2024"
             headline="Neurodivergent staff run the show at this new Delhi HC café."
-            content="On stepping inside the café, visitors are greeted by a warm and charming Arunima Bhaduri, who manages a kiosk of a non-profit, Shaurya Foundation Trust, at Sagar Express. Hand-made paintings, coasters, brownies, cookies, mugs, and water bottles made by neurodivergent persons"
+            content="On stepping inside the café, visitors are greeted by a warm and charming Arunima Bhaduri, who manages a kiosk of a non-profit, Shaurya Foundation Trust, at Sagar Express. Hand-made paintings, coasters, brownies, cookies, mugs, and water bottles made by neurodivergent persons."
             link="https://theprint.in/judiciary/neurodivergent-staff-run-the-show-at-this-new-delhi-hc-cafe-its-fast-becoming-lawyers-favourite-haunt/2260679/"
           />
         </div>
