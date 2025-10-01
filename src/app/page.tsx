@@ -249,7 +249,7 @@ const TabComponent = () => {
                     className="object-cover"
                   />
                 </div>
-                <span className="text-sm font-medium text-[#3f51b5]">DWS Training</span>
+                <span className="text-sm font-medium text-[#3f51b5]">DSW Training</span>
               </div>
             </div>
           </div>

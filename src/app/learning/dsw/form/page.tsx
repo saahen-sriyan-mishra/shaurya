@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 
-export default function DWS_form() {
+export default function DSW_form() {
   const [isWide, setIsWide] = useState(false);
   const [formData, setFormData] = useState({
     // Personal Information
