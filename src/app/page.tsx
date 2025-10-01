@@ -103,25 +103,25 @@ const TabComponent = () => {
         <div className="w-1/5 flex flex-col pt-[10px]">
           {/* Bottom 80% height - 5 buttons */}
           <div className="h-4/5 flex flex-col items-center py-4">
-            {[
-              { src: "/home/ILP.jpg", label: "ILP" },
-              { src: "/home/Work unit.jpg", label: "WORK UNIT" },
-              { src: "/home/Hostel.jpg", label: "HOSTEL" },
-              { src: "/home/DSW logo.JPG", label: "DSW TRAINING" },
-            ].map(({ src, label }) => (
-              <div key={label} className="flex-1 w-full flex flex-col justify-center items-center">
-                <div className="w-[100px] h-[100px] relative mb-2">
-                  <Image
-                    src={src}
-                    alt={label}
-                    fill
-                    className="object-fill"
-                  />
-                </div>
-                <span className="text-sm font-medium mt-1 text-[#3f51b5]">{label}</span>
-              </div>
-            ))}
-          </div>
+  {[
+    { src: "/tab/ILP.PNG", label: "ILP" },
+    { src: "/tab/WORK_UNITS.PNG", label: "WORK UNIT" },
+    { src: "/tab/HOSTEL.PNG", label: "HOSTEL" },
+    { src: "/tab/DSW_TRAINING.PNG", label: "DSW TRAINING" },
+  ].map(({ src, label }) => (
+    <div key={label} className="flex-1 w-full flex flex-col justify-center items-center">
+      <div className="w-[100px] h-[100px] relative mb-2">
+        <Image
+          src={src}
+          alt={label}
+          fill
+          className="object-fill"
+        />
+      </div>
+      <span className="text-l font-bold mt-1 text-[#3f51b5] pb-[20px]">{label}</span>
+    </div>
+  ))}
+</div>
         </div>
 
         {/* Right Section (80% width) */}
@@ -200,13 +200,13 @@ const TabComponent = () => {
               <div className="text-center">
                 <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
                   <Image
-                    src="/home/ILP.jpg"
+                    src="/tab/ILP.PNG"
                     alt="ILP"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <span className="text-sm font-medium text-[#3f51b5]">ILP</span>
+                <span className="text-sm font-bold text-[#3f51b5]">ILP</span>
               </div>
             </div>
             
@@ -214,13 +214,13 @@ const TabComponent = () => {
               <div className="text-center">
                 <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
                   <Image
-                    src="/home/Work unit.jpg"
+                    src="/tab/WORK_UNITS.PNG"
                     alt="WORK UNIT"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <span className="text-sm font-medium text-[#3f51b5]">WORK UNIT</span>
+                <span className="text-sm font-bold text-[#3f51b5]">WORK UNIT</span>
               </div>
             </div>
             
@@ -229,13 +229,13 @@ const TabComponent = () => {
               <div className="text-center">
                 <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
                   <Image
-                    src="/home/Hostel.jpg"
+                    src="/tab/HOSTEL.PNG"
                     alt="HOSTEL"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <span className="text-sm font-medium text-[#3f51b5]">HOSTEL</span>
+                <span className="text-sm font-bold text-[#3f51b5]">HOSTEL</span>
               </div>
             </div>
             
@@ -243,13 +243,13 @@ const TabComponent = () => {
               <div className="text-center">
                 <div className="w-[100px] h-[100px] relative mb-2 mx-auto">
                   <Image
-                    src="/home/DSW logo.JPG"
+                    src="/tab/DSW_TRAINING.PNG"
                     alt="DWS"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <span className="text-sm font-medium text-[#3f51b5]">DSW Training</span>
+                <span className="text-sm font-bold text-[#3f51b5]">DSW Training</span>
               </div>
             </div>
           </div>
