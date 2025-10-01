@@ -507,7 +507,7 @@ export default function DWS_form() {
           </div>
 
           {/* Middle Section */}
-          <div style={{ backgroundColor: yellowColor }} className="w-full flex items-center p-4" style={{ height: '4rem' }}>
+          <div style={{ backgroundColor: yellowColor, height: '4rem' }} className="w-full flex items-center p-4">
             <p style={{ color: blueColor }} className="ml-4 italic text-lg">
               Join Our Comprehensive Training Program
             </p>
