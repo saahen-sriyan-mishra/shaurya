@@ -87,7 +87,7 @@ export default function Header() {
                 <Link href="/learning/programs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Programs</Link>
                 <Link href="/learning/after_hour" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">After Hour</Link>
                 <Link href="/learning/hostel_life" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Hostel Life</Link>
-                <Link href="/learning/dws" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">DSW Training</Link>
+                <Link href="/learning/dsw" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">DSW Training</Link>
               </div>
             </div>
 
@@ -185,7 +185,7 @@ export default function Header() {
                         <Link href="/learning/programs" onClick={closeMobileMenu} className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">Programs</Link>
                         <Link href="/learning/after_hour" onClick={closeMobileMenu} className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">After Hour</Link>
                         <Link href="/learning/hostel_life" onClick={closeMobileMenu} className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">Hostel Life</Link>
-                        <Link href="/learning/dws" onClick={closeMobileMenu} className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">DSW Training</Link>
+                        <Link href="/learning/dsw" onClick={closeMobileMenu} className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">DSW Training</Link>
                       </div>
                     )}
                   </div>

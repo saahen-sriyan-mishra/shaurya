@@ -90,7 +90,7 @@ export default function DWSTraining() {
       {/* Centered Apply Now button */}
       <div className="w-full flex justify-center mt-8">
   <Link
-    href="/learning/dws/form"
+    href="/learning/dsw/form"
     className="px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105"
     style={{
       backgroundColor: blueColor,
