@@ -86,7 +86,7 @@ export default function Page() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="shadow-lg p-6 flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+            className="shadow-lg p-6 flex flex-col transition-transform duration-"
             style={cardStyle}
           >
             <h2 className="text-xl font-bold mb-4 text-center">

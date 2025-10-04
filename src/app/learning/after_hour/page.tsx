@@ -68,16 +68,23 @@ useEffect(() => {
 
 
           {/* Bottom 65% */}
-          <div className="w-full h-[65vh] flex">
+          <div className="w-full h-[85vh] flex">
             <div className="w-[7%]"></div>
 
 
 
-            <div style={{ backgroundColor: yellowColor }} className="w-[50%] flex items-center p-8">
+            <div style={{ backgroundColor: yellowColor }} className="w-[93%] flex items-center p-8">
 
 
 <p className="text-justify mb-4 text-black">
-  At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards through comprehensive support. We offer 24/7 assistance, ensuring safety and care. Our facility is well-equipped with essential supplies and provides home-cooked meals. With dedicated teachers for life skills and a variety of engaging activities, we create a nurturing environment that promotes growth, learning, and joy for all.
+    <br /><br />
+Beyond the structured training hours, our Shaurya Foundation Trust trainees enjoy a vibrant community life filled with engaging activities that foster friendships, relaxation, and personal growth. Evenings at our facility buzz with excitement as trainees come together for group games that range from traditional board games and card tournaments to interactive team-building activities that celebrate each individual's unique strengths and abilities. Our spacious common areas transform into entertainment hubs during movie time, where trainees gather with popcorn and comfortable seating to enjoy carefully selected films that inspire, educate, and entertain. These movie sessions often spark meaningful discussions and create lasting memories among our diverse community.
+ <br /><br />
+As the sun begins to set, many of our trainees participate in peaceful evening walks around our beautiful campus grounds, providing an opportunity to unwind, connect with nature, and engage in quiet conversations with friends and mentors. These walks not only promote physical wellness but also serve as valuable social interaction time where trainees share their daily experiences and support one another.
+ <br /><br />
+Additional after-hour activities include art and craft sessions, music appreciation time, storytelling circles, and seasonal celebrations that honor various cultural traditions represented within our community. Our recreational programs are designed to ensure that every trainee feels included, valued, and empowered to pursue their interests while building meaningful relationships. These moments of joy and connection are integral to creating a holistic environment where our trainees can thrive both personally and professionally.
+
+
 
   <br /><br />
 
@@ -85,6 +92,8 @@ useEffect(() => {
 
 
             </div>
+ 
+  {/*
             <div
   style={{ backgroundColor: yellowColor }}
   className="w-[43%] flex items-center justify-center"
@@ -97,7 +106,7 @@ useEffect(() => {
       className="object-cover rounded-md"
     />
   </div>
-</div>
+</div> */}
           </div>
         </div>
 
@@ -120,10 +129,11 @@ useEffect(() => {
 
 
           {/* Bottom 65% */}
-          <div className="w-full h-[65vh] flex">
+          <div className="w-full h-[80vh] flex">
             <div className="w-[7%]"></div>
 
 
+{/*
 <div
   style={{ backgroundColor: yellowColor }}
   className="w-[43%] flex items-center justify-center"
@@ -136,14 +146,17 @@ useEffect(() => {
       className="object-cover rounded-md"
     />
   </div>
-</div>
-            <div style={{ backgroundColor: yellowColor }} className="w-[50%] flex items-center p-8">
+</div> */}
+            <div style={{ backgroundColor: yellowColor }} className="w-[93%] flex items-center p-8">
 
 
 <p className="text-justify mb-4 text-black">
-  At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards through comprehensive support. We offer 24/7 assistance, ensuring safety and care. Our facility is well-equipped with essential supplies and provides home-cooked meals. With dedicated teachers for life skills and a variety of engaging activities, we create a nurturing environment that promotes growth, learning, and joy for all.
+  Our centre at Shaurya Foundation Trust is thoughtfully designed to provide trainees with a comfortable, safe, and empowering environment that supports holistic well-being. Surrounded by open spaces, the facility offers ample room for relaxation, recreation, and outdoor activities, creating a sense of tranquility and freedom. The campus is equipped with modern fitness equipment and all necessary accessories, encouraging a healthy and active lifestyle for every trainee. Clean, fresh water and nutritious food are supplied regularly, ensuring the well-being and vitality of all residents.
+<br/><br/>
+A dedicated full-time Disability Support Worker (DSW) team is always available, offering guidance, support, and care whenever needed. Common leisure spaces are carefully furnished, offering cozy spots for relaxation and socialization, while reliable WiFi ensures continuous connectivity for work, learning, and communication. The centre also provides convenient laundry facilities, maintaining high standards of cleanliness and hygiene across the campus.
+<br/><br/>
+Safety is a top priority at Shaurya Foundation Trust. The environment is monitored and maintained to guarantee the security and peace of mind of every individual. Every room and shared space is fully furnished, contributing to a welcoming and homely atmosphere. Above all, we pride ourselves on maintaining an environment that is not only safe and clean but also inclusive and nurturing, enabling trainees to flourish and feel at home.
 
-  <br /><br />
 
 </p>
 
@@ -203,6 +216,7 @@ useEffect(() => {
 
       </div>
 
+
       {/* Mobile View (shown on screens smaller than medium) */}
       <div className="md:hidden">
         {/* First Section Mobile */}
@@ -232,13 +246,18 @@ useEffect(() => {
 </div>
 
           {/* Bottom 35% */}
-          <div style={{ backgroundColor: yellowColor }} className="w-full h-[35vh] flex items-center p-6">
+          <div style={{ backgroundColor: yellowColor }} className="w-full h-[95vh] flex items-center p-6">
             <p
   style={{ color: "black" }}
   className="text-justify"
 >
+<br /><br />
+ Beyond the structured training hours, our Shaurya Foundation Trust trainees enjoy a vibrant community life filled with engaging activities that foster friendships, relaxation, and personal growth. Evenings at our facility buzz with excitement as trainees come together for group games that range from traditional board games and card tournaments to interactive team-building activities that celebrate each individual's unique strengths and abilities. Our spacious common areas transform into entertainment hubs during movie time, where trainees gather with popcorn and comfortable seating to enjoy carefully selected films that inspire, educate, and entertain. These movie sessions often spark meaningful discussions and create lasting memories among our diverse community.
+ <br /><br />
+ As the sun begins to set, many of our trainees participate in peaceful evening walks around our beautiful campus grounds, providing an opportunity to unwind, connect with nature, and engage in quiet conversations with friends and mentors. These walks not only promote physical wellness but also serve as valuable social interaction time where trainees share their daily experiences and support one another.
 
-                At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards through comprehensive support. We offer 24/7 assistance, ensuring safety and care. Our facility is well-equipped with essential supplies and provides home-cooked meals. With dedicated teachers for life skills and a variety of engaging activities, we create a nurturing environment that promotes growth, learning, and joy for all.
+<br /><br />
+Additional after-hour activities include art and craft sessions, music appreciation time, storytelling circles, and seasonal celebrations that honor various cultural traditions represented within our community. Our recreational programs are designed to ensure that every trainee feels included, valued, and empowered to pursue their interests while building meaningful relationships. These moments of joy and connection are integral to creating a holistic environment where our trainees can thrive both personally and professionally.
   <br /><br />
 
               </p>
@@ -272,13 +291,18 @@ useEffect(() => {
 </div>
 
           {/* Bottom 35% */}
-          <div style={{ backgroundColor: yellowColor }} className="w-full h-[35vh] flex items-center p-6">
+          <div style={{ backgroundColor: yellowColor }} className="w-full h-[90vh] flex items-center p-6">
             <p
   style={{ color: "black" }}
   className="text-justify"
 >
 
-                At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards through comprehensive support. We offer 24/7 assistance, ensuring safety and care. Our facility is well-equipped with essential supplies and provides home-cooked meals. With dedicated teachers for life skills and a variety of engaging activities, we create a nurturing environment that promotes growth, learning, and joy for all.
+                Our centre at Shaurya Foundation Trust is thoughtfully designed to provide trainees with a comfortable, safe, and empowering environment that supports holistic well-being. Surrounded by open spaces, the facility offers ample room for relaxation, recreation, and outdoor activities, creating a sense of tranquility and freedom. The campus is equipped with modern fitness equipment and all necessary accessories, encouraging a healthy and active lifestyle for every trainee. Clean, fresh water and nutritious food are supplied regularly, ensuring the well-being and vitality of all residents.
+<br /><br />
+A dedicated full-time Disability Support Worker (DSW) team is always available, offering guidance, support, and care whenever needed. Common leisure spaces are carefully furnished, offering cozy spots for relaxation and socialization, while reliable WiFi ensures continuous connectivity for work, learning, and communication. The centre also provides convenient laundry facilities, maintaining high standards of cleanliness and hygiene across the campus.
+<br /><br />
+Safety is a top priority at Shaurya Foundation Trust. The environment is monitored and maintained to guarantee the security and peace of mind of every individual. Every room and shared space is fully furnished, contributing to a welcoming and homely atmosphere. Above all, we pride ourselves on maintaining an environment that is not only safe and clean but also inclusive and nurturing, enabling trainees to flourish and feel at home.
+
   <br /><br />
 
               </p>
