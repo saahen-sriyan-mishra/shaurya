@@ -1,5 +1,7 @@
 "use client";
 
+import Link from 'next/link';
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
@@ -39,7 +41,7 @@ export default function Visit() {
             <div className="w-[7%] bg-white"></div>
             <div style={{ backgroundColor: yellowColor }} className="w-[93%] flex items-center">
               <p style={{ color: blueColor }} className="ml-6 italic text-2xl">
-  Empowering Lives Through Comprehensive Care and Support
+   A journey of understanding: A story to connect and discover the community 
 </p>
             </div>
           </div>
@@ -49,7 +51,7 @@ export default function Visit() {
             <div className="w-[7%]"></div>
             <div style={{ backgroundColor: blueColor }} className="w-[50%] flex items-center p-8">
               <p className="text-justify mb-4 text-white">
-                At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards through comprehensive support. We offer 24/7 assistance, ensuring safety and care. Our facility is well-equipped with essential supplies and provides home-cooked meals. With dedicated teachers for life skills and a variety of engaging activities, we create a nurturing environment that promotes growth, learning, and joy for all.
+                Visiting our campus offers a unique opportunity to engage with neurodiverse adults and witness their incredible skills development journey. As you explore our hostel facilities, you’ll gain insight into the supportive environment we provide. Close interactions with our community members allow you to understand autism in a deeper way, fostering empathy and collaboration. By seeing firsthand the employment opportunities we create, you'll discover how meaningful connections can lead to a more inclusive future for everyone. Join us and be part of this enriching experience!
               </p>
             </div>
             <div
@@ -88,52 +90,73 @@ export default function Visit() {
               </div>
               
               {/* Lorius ipsum text */}
-              <div className="h-[20vh] flex items-center">
+              <div className="h-[10vh] flex items-center">
                 <p className="text-lg" style={{ color: blueColor }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+                  Visit our campus at Delhi for day boarding and at Palwal for both hostel and day boarding facilities.
                 </p>
               </div>
               
               {/* Button */}
-              <div className="h-[5vh] flex items-center">
-                <button 
-  className="flex items-center justify-center font-bold transition-all duration-300"
-  style={{ 
-    width: '300px', 
-    height: '40px',
-    backgroundColor: blueColor,
-    border: `1px solid ${blueColor}`,
-    color: yellowColor
-  }}
-  onMouseEnter={(e) => {
-    const target = e.target as HTMLElement;
-    target.style.backgroundColor = 'transparent';
-    target.style.color = blueColor;
-  }}
-  onMouseLeave={(e) => {
-    const target = e.target as HTMLElement;
-    target.style.backgroundColor = blueColor;
-    target.style.color = yellowColor;
-  }}
->
-  BOOK A CAMPUS TOUR
-</button>
-              </div>
+
+
+<div className="h-[5vh] flex items-center">
+  <Link href="/admission/request_info">
+    <button
+      className="flex items-center justify-center font-bold transition-all duration-300"
+      style={{
+        width: '300px',
+        height: '40px',
+        backgroundColor: blueColor,
+        border: `1px solid ${blueColor}`,
+        color: yellowColor,
+      }}
+      onMouseEnter={(e) => {
+        const target = e.target as HTMLElement;
+        target.style.backgroundColor = 'transparent';
+        target.style.color = blueColor;
+      }}
+      onMouseLeave={(e) => {
+        const target = e.target as HTMLElement;
+        target.style.backgroundColor = blueColor;
+        target.style.color = yellowColor;
+      }}
+    >
+      BOOK A CAMPUS TOUR
+    </button>
+  </Link>
+</div>
               
               {/* Google Map */}
-              <div className="h-[50vh] w-full mt-[20px] pr-[20px]">
-                <iframe
-  src="https://maps.google.com/maps?q=40.7069,-74.0113&z=15&output=embed"
-  width="100%"
-  height="100%"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-></iframe>
-              </div>
-            </div>
+<div className="h-[65vh] w-full mt-[20px] pr-[20px]">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3513.146453829019!2d77.3352001!3d28.0202823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39732dc9dc9b3559%3A0xafd5561933977bea!2sShaurya%20Foundation%20Trust%20Independent%20Living%20Program%2C%20Palwal!5e0!3m2!1sen!2sin!4v1696435200000!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+            <br/>
+<div style={{ color: blueColor }}>
+  <div className="mb-4">
+    <strong>Shaurya Foundation Trust – Independent Living Program</strong><br />
+    National Highway 19,<br />
+    Aurangabad, Palwal District,<br />
+    Haryana 121105, India
+  </div>
+
+  <div>
+    <strong>Shaurya Foundation Trust – Delhi Office</strong><br />
+    538, B Block Road,<br />
+    Block B, New Friends Colony,<br />
+    New Delhi, Delhi 110025, India
+  </div>
+</div>
+</div>
           </div>
+          
         </div>
         <br/><br/><br/>
         {/* Third Section - contact */}
@@ -173,7 +196,7 @@ export default function Visit() {
               >
                 <div className="text-xl font-bold" style={{ color: blueColor }}>
 General Inquiries</div>
-                <div className="text-lg font-bold" style={{ color: blueColor }}>123</div>
+                <div className="text-lg font-bold" style={{ color: blueColor }}>9650316800</div>
               </div>
               
               {/* Box 2 */}
@@ -225,7 +248,7 @@ Parent Inquiries</div>
           {/* Upper Middle 15% */}
           <div style={{ backgroundColor: yellowColor }} className="w-full h-[15%] flex items-center p-4">
             <p style={{ color: blueColor }} className="ml-6 italic text-2xl">
-  Empowering Lives Through Comprehensive Care and Support
+   A journey of understanding: A story to connect and discover the community 
 </p>
           </div>
 
@@ -250,7 +273,7 @@ Parent Inquiries</div>
               style={{ color: "white" }}
               className="text-justify"
             >
-              At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards through comprehensive support. We offer 24/7 assistance, ensuring safety and care. Our facility is well-equipped with essential supplies and provides home-cooked meals. With dedicated teachers for life skills and a variety of engaging activities, we create a nurturing environment that promotes growth, learning, and joy for all.
+              Visiting our campus offers a unique opportunity to engage with neurodiverse adults and witness their incredible skills development journey. As you explore our hostel facilities, you’ll gain insight into the supportive environment we provide. Close interactions with our community members allow you to understand autism in a deeper way, fostering empathy and collaboration. By seeing firsthand the employment opportunities we create, you'll discover how meaningful connections can lead to a more inclusive future for everyone. Join us and be part of this enriching experience!
             </p>
           </div>
         </div>
@@ -268,52 +291,73 @@ Parent Inquiries</div>
           </div>
           
           {/* Lorius ipsum text */}
-          <div className="h-[25vh] flex items-center justify-center text-center">
+          <div className="h-[10vh] flex items-center justify-center text-center">
             <p className="text-lg px-4" style={{ color: blueColor }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+              Visit our campus at Delhi for day boarding and at Palwal for both hostel and day boarding facilities.
             </p>
           </div>
           
           {/* Button */}
           <div className="h-[10vh] flex items-center justify-center">
-            <button 
-  className="flex items-center justify-center font-bold transition-all duration-300"
-  style={{ 
-    width: '300px', 
-    height: '40px',
-    backgroundColor: blueColor,
-    border: `1px solid ${blueColor}`,
-    color: yellowColor
-  }}
-  onMouseEnter={(e) => {
-    const target = e.target as HTMLElement;
-    target.style.backgroundColor = 'transparent';
-    target.style.color = blueColor;
-  }}
-  onMouseLeave={(e) => {
-    const target = e.target as HTMLElement;
-    target.style.backgroundColor = blueColor;
-    target.style.color = yellowColor;
-  }}
->
-  BOOK A CAMPUS TOUR
-</button>
+            <div className="h-[5vh] flex items-center">
+  <Link href="/admission/request_info">
+    <button
+      className="flex items-center justify-center font-bold transition-all duration-300"
+      style={{
+        width: '300px',
+        height: '40px',
+        backgroundColor: blueColor,
+        border: `1px solid ${blueColor}`,
+        color: yellowColor,
+      }}
+      onMouseEnter={(e) => {
+        const target = e.target as HTMLElement;
+        target.style.backgroundColor = 'transparent';
+        target.style.color = blueColor;
+      }}
+      onMouseLeave={(e) => {
+        const target = e.target as HTMLElement;
+        target.style.backgroundColor = blueColor;
+        target.style.color = yellowColor;
+      }}
+    >
+      BOOK A CAMPUS TOUR
+    </button>
+  </Link>
+</div>
           </div>
           
           {/* Google Map */}
-          <div className="h-[60vh] w-full">
-            <iframe
-  src="https://maps.google.com/maps?q=40.7069,-74.0113&z=15&output=embed"
-  width="100%"
-  height="100%"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-></iframe>
-          </div>
+<div className="h-[65vh] w-full mt-[20px] pr-[20px]">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3513.146453829019!2d77.3352001!3d28.0202823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39732dc9dc9b3559%3A0xafd5561933977bea!2sShaurya%20Foundation%20Trust%20Independent%20Living%20Program%2C%20Palwal!5e0!3m2!1sen!2sin!4v1696435200000!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+<br/>
+<div style={{ color: blueColor }}>
+  <div className="mb-4">
+    <strong>Shaurya Foundation Trust – Independent Living Program</strong><br />
+    National Highway 19,<br />
+    Aurangabad, Palwal District,<br />
+    Haryana 121105, India
+  </div>
+
+  <div>
+    <strong>Shaurya Foundation Trust – Delhi Office</strong><br />
+    538, B Block Road,<br />
+    Block B, New Friends Colony,<br />
+    New Delhi, Delhi 110025, India
+  </div>
+</div>
         </div>
         <br/><br/>
+
         {/* Third Section Mobile - Contact*/}
         <div className="w-full flex flex-col p-4">
           {/* Heading - left aligned with 10px padding */}
@@ -342,7 +386,7 @@ Parent Inquiries</div>
           >
             <div className="text-xl font-bold" style={{ color: blueColor }}>
 General Inquiries</div>
-            <div className="text-lg font-bold" style={{ color: blueColor }}>123</div>
+            <div className="text-lg font-bold" style={{ color: blueColor }}>9650316800</div>
           </div>
           
           {/* Box 2 */}

@@ -52,7 +52,7 @@ useEffect(() => {
   "Readiness for Employment",
   "Employment Training",
   "Open Employment",
-  "DWS Training",
+  "DSW Training",
   "Sensitization Awareness and Advocacy",
   "Day Boarding",
 ];
@@ -85,7 +85,7 @@ useEffect(() => {
 
 
 <p className="text-justify mb-4 text-black">
-  At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards through comprehensive support. We offer 24/7 assistance, ensuring safety and care. Our facility is well-equipped with essential supplies and provides home-cooked meals. With dedicated teachers for life skills and a variety of engaging activities, we create a nurturing environment that promotes growth, learning, and joy for all.
+  Explore our comprehensive programs designed to support individuals with autism and promote neurodiversity. Our Independent Living Program empowers participants with essential life skills for greater autonomy. The Employment Training Program focuses on job readiness and workplace integration. Our Life-skill training program enhances daily living competencies, while the fitness program promotes physical health and well-being. Additionally, our DSW Training Program equips Direct Support Workers with specialized skills to better assist those with neurodiverse needs. Join us in fostering an inclusive community!
 
 
 </p>
@@ -193,7 +193,7 @@ useEffect(() => {
   className="text-justify"
 >
 
-                At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards through comprehensive support. We offer 24/7 assistance, ensuring safety and care. Our facility is well-equipped with essential supplies and provides home-cooked meals. With dedicated teachers for life skills and a variety of engaging activities, we create a nurturing environment that promotes growth, learning, and joy for all.
+                Explore our comprehensive programs designed to support individuals with autism and promote neurodiversity. Our Independent Living Program empowers participants with essential life skills for greater autonomy. The Employment Training Program focuses on job readiness and workplace integration. Our Life-skill training program enhances daily living competencies, while the fitness program promotes physical health and well-being. Additionally, our DSW Training Program equips Direct Support Workers with specialized skills to better assist those with neurodiverse needs. Join us in fostering an inclusive community!
   <br /><br />
 
               </p>

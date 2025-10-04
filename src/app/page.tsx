@@ -532,7 +532,7 @@ const NewsSection = () => {
           <NewsCard
             date="Wednesday 11 September 2024"
             headline="Warm & sweet: Delhi HC cafe serves diversity dessert with paycheque"
-            content="Its 10 neurodiverse staff members had collectively reached a milestone about a month afterCJI DY Chandrachud had opened the cafe. On Tuesday, they got their first paycheques from acting chief justice Manmohan."
+            content="Its 10 neurodiverse staff members had collectively reached a milestone about a month after CJI DY Chandrachud had opened the cafe. On Tuesday, they got their first paycheques from acting chief justice Manmohan."
             link="https://timesofindia.indiatimes.com/city/delhi/warm-sweet-delhi-hc-cafe-serves-diversity-dessert-with-paycheque/articleshow/113254900.cms#"
           />
           

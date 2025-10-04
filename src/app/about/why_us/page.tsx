@@ -194,7 +194,7 @@ useEffect(() => {
             <div className="w-[7%] bg-white"></div>
             <div style={{ backgroundColor: yellowColor }} className="w-[93%] flex items-center">
               <p style={{ color: blueColor }} className="ml-6 italic text-2xl">
-                Empowering Lives Through Comprehensive Care and Support
+                 Breaking Barriers, Building Futures.
               </p>
             </div>
           </div>
@@ -219,15 +219,7 @@ useEffect(() => {
 
             <div style={{ backgroundColor: blueColor }} className="w-[50%] flex items-center p-8">
               <p className="text-justify mb-4 text-white">
-                At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards
-                through comprehensive support. We offer 24/7 assistance, ensuring safety and care.
-                Our facility is well-equipped with essential supplies and provides home-cooked
-                meals. With dedicated teachers for life skills and a variety of engaging activities,
-                we create a nurturing environment that promotes growth, learning, and joy for all.
-                <br /><br />
-                <button className="px-4 py-2 rounded transition-colors duration-300 text-[#f8d287] bg-transparent hover:bg-[#f8d287] hover:text-[#3f51b5]">
-                  Request Info
-                </button>
+                Body (content) - At Shaurya Foundation Trust, we empower neurodiverse individuals, including those with autism, to achieve independence and employment success. Our tailored training programs focus on essential life skills, fostering confidence and self-reliance. With a dedicated team and innovative approaches, we break barriers to help our participants thrive in their personal and professional lives. Choose us for a transformative journey towards empowerment and inclusion.               
               </p>
             </div>
           </div>
@@ -436,7 +428,7 @@ useEffect(() => {
           {/* Upper Middle 15% */}
           <div style={{ backgroundColor: yellowColor }} className="w-full h-[15%] flex items-center p-4">
             <p style={{ color: blueColor }} className="ml-6 italic text-2xl">
-              Empowering Lives Through Comprehensive Care and Support
+               Breaking Barriers, Building Futures.
             </p>
           </div>
 
@@ -458,15 +450,9 @@ useEffect(() => {
           {/* Bottom 35% */}
           <div style={{ backgroundColor: blueColor }} className="w-full h-[35%] flex items-center p-6">
             <p style={{ color: "white" }} className="text-justify">
-              At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards
-              through comprehensive support. We offer 24/7 assistance, ensuring safety and care. Our
-              facility is well-equipped with essential supplies and provides home-cooked meals. With
-              dedicated teachers for life skills and a variety of engaging activities, we create a
-              nurturing environment that promotes growth, learning, and joy for all.
+              Body (content) - At Shaurya Foundation Trust, we empower neurodiverse individuals, including those with autism, to achieve independence and employment success. Our tailored training programs focus on essential life skills, fostering confidence and self-reliance. With a dedicated team and innovative approaches, we break barriers to help our participants thrive in their personal and professional lives. Choose us for a transformative journey towards empowerment and inclusion.
               <br /><br />
-              <button className="px-4 py-2 rounded transition-colors duration-300 text-[#f8d287] bg-transparent hover:bg-[#f8d287] hover:text-[#3f51b5]">
-                Request Info
-              </button>
+
             </p>
           </div>
         </div>

@@ -149,7 +149,7 @@ export default function RequestInfo() {
             <div className="w-[7%] bg-white"></div>
             <div style={{ backgroundColor: yellowColor }} className="w-[93%] flex items-center">
               <p style={{ color: blueColor }} className="ml-6 italic text-2xl">
-                Empowering Lives Through Comprehensive Care and Support
+                Thank you for your interest in Shaurya Foundation Trust! Please fill out the form below, and our team will reach out to you as soon as we receive your request. We look forward to connecting with you soon!  
               </p>
             </div>
           </div>
@@ -443,7 +443,7 @@ export default function RequestInfo() {
           {/* Upper Middle 15% */}
           <div style={{ backgroundColor: yellowColor }} className="w-full h-[15%] flex items-center p-4">
             <p style={{ color: blueColor }} className="ml-6 italic text-2xl">
-              Empowering Lives Through Comprehensive Care and Support
+              Thank you for your interest in Shaurya Foundation Trust! Please fill out the form below, and our team will reach out to you as soon as we receive your request. We look forward to connecting with you soon!  
             </p>
           </div>
 

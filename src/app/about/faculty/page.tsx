@@ -40,8 +40,10 @@ const [isWide, setIsWide] = useState(false);
             <div className="w-[7%] bg-white"></div>
             <div style={{ backgroundColor: yellowColor }} className="w-[93%] flex items-center">
               <p style={{ color: blueColor }} className="ml-6 italic text-2xl">
-  Empowering Lives Through Comprehensive Care and Support
+  Meet the Shaurya Foundation Team
+
 </p>
+
             </div>
           </div>
 
@@ -67,15 +69,9 @@ const [isWide, setIsWide] = useState(false);
 
 
 <p className="text-justify mb-4 text-white">
-  At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards through comprehensive support. We offer 24/7 assistance, ensuring safety and care. Our facility is well-equipped with essential supplies and provides home-cooked meals. With dedicated teachers for life skills and a variety of engaging activities, we create a nurturing environment that promotes growth, learning, and joy for all.
+The Shaurya Foundation Trust was founded by a passionate group of advocates committed to empowering individuals with disabilities, including those with autism and other neurodiversities. Their primary motive is to provide specialized training programs that promote independent living and enhance employment skills. By fostering self-reliance and confidence, the trust aims to create a supportive environment where every individual can thrive and contribute meaningfully to society.
 
-  <br /><br />
 
-  <button
-    className="px-4 py-2 rounded transition-colors duration-300 text-[#f8d287] bg-transparent hover:bg-[#f8d287] hover:text-[#3f51b5]"
-  >
-    Request Info
-  </button>
 </p>
 
 
@@ -109,57 +105,37 @@ const [isWide, setIsWide] = useState(false);
   <div className="w-[7%]" />
 
   {/* Content: 2 Boxes */}
-  <div className="w-[80%] flex gap-6">
-
-    {/* Box 1 */}
-    <div className="w-[320px] h-[160px] border-2 border-[#3f51b5] bg-white flex flex-col">
-      {/* Top 25% yellow with text */}
-      <div className="h-[25%] bg-[#f8d287] flex items-center pl-[20px]">
-        <span className="text-[#3f51b5] font-medium">Text 1</span>
-      </div>
-
-      {/* Bottom 75% with horizontal divider and text */}
-      <div className="h-[75%] p-[10px] relative flex flex-col">
-        {/* Top Half - abc 1 */}
-        <div className="h-1/2 flex items-start pl-[10px] text-[#3f51b5]">
-          abc 1
-        </div>
-
-        {/* Divider Line */}
-        <div className="w-full h-[2px] bg-[#3f51b5] my-[5px]" />
-
-        {/* Bottom Half - xyz 1 */}
-        <div className="h-1/2 flex items-end pl-[10px] text-[#3f51b5] -translate-y-[10px]">
-          xyz 1
-        </div>
-      </div>
+<div className="w-[80%] flex gap-6 items-stretch">
+  {/* Box 1 */}
+  <div className="w-[35vw] h-auto border-2 border-[#3f51b5] bg-white flex flex-col">
+    {/* Top Header */}
+    <div className="h-[10%] bg-[#f8d287] flex items-center pl-[20px]">
+      <span className="text-[#3f51b5] font-medium">Ms Rubina Mohan</span>
     </div>
 
-    {/* Box 2 */}
-    <div className="w-[320px] h-[160px] border-2 border-[#3f51b5] bg-white flex flex-col">
-      {/* Top 25% yellow with text */}
-      <div className="h-[25%] bg-[#f8d287] flex items-center pl-[20px]">
-        <span className="text-[#3f51b5] font-medium">Text 2</span>
-      </div>
-
-      {/* Bottom 75% with horizontal divider and text */}
-      <div className="h-[75%] p-[10px] relative flex flex-col">
-        {/* Top Half - abc 2 */}
-        <div className="h-1/2 flex items-start pl-[10px] text-[#3f51b5]">
-          abc 2
-        </div>
-
-        {/* Divider Line */}
-        <div className="w-full h-[2px] bg-[#3f51b5] my-[5px]" />
-
-        {/* Bottom Half - xyz 2 */}
-        <div className="h-1/2 flex items-end pl-[10px] text-[#3f51b5] -translate-y-[10px]">
-          xyz 2
-        </div>
+    {/* Content */}
+    <div className="flex-1 p-[10px] relative flex flex-col">
+      <div className="flex items-start pl-[10px] text-[#3f51b5] text-justify">
+        As the CEO of Shaurya Foundation Trust, I bring 25 years of expertise and passion to my role. With a proven track record in functional training and inclusive employment for adults with neurodiverse needs, I have been instrumental in driving our mission towards financial empowerment and independent living. Under my leadership, Shaurya Foundation Trust continues to make a meaningful impact by creating inclusive employment models, fostering strong self-advocacy practices, and nurturing collaborative partnerships with parents, families, communities, and corporations. I champion this cause with great heart, empathy, and zeal.
       </div>
     </div>
-
   </div>
+
+  {/* Box 2 */}
+  <div className="w-[35vw] h-auto border-2 border-[#3f51b5] bg-white flex flex-col">
+    {/* Top Header */}
+    <div className="h-[10%] bg-[#f8d287] flex items-center pl-[20px]">
+      <span className="text-[#3f51b5] font-medium">Ms Arpita Yadav</span>
+    </div>
+
+    {/* Content */}
+    <div className="flex-1 p-[10px] relative flex flex-col">
+      <div className="flex items-start pl-[10px] text-[#3f51b5] text-justify">
+        As the Director of Shaurya Foundation Trust in Palwal, I have transformed my personal hardships into a beacon of hope for neurodiverse adults, drawing on 24 years of experience in this vital work. Overcoming my own challenges has fueled my dedication to understanding and advocating for this community. Through empathy and innovative teaching methods, I empower individuals to develop essential life skills. My unwavering commitment fosters independence, helping them thrive and lead fulfilling lives, proving that resilience can create profound change.
+      </div>
+    </div>
+  </div>
+</div>
 
   {/* 10% right margin */}
   <div className="w-[10%]" />
@@ -186,7 +162,7 @@ const [isWide, setIsWide] = useState(false);
           {/* Upper Middle 15% */}
           <div style={{ backgroundColor: yellowColor }} className="w-full h-[15%] flex items-center p-4">
             <p style={{ color: blueColor }} className="ml-6 italic text-2xl">
-  Empowering Lives Through Comprehensive Care and Support
+    Meet the Shaurya Foundation Team
 </p>
           </div>
 
@@ -213,8 +189,9 @@ const [isWide, setIsWide] = useState(false);
   className="text-justify"
 >
 
-                At Shaurya Foundation Trust, our Centre is dedicated to enhancing living standards through comprehensive support. We offer 24/7 assistance, ensuring safety and care. Our facility is well-equipped with essential supplies and provides home-cooked meals. With dedicated teachers for life skills and a variety of engaging activities, we create a nurturing environment that promotes growth, learning, and joy for all.
+The Shaurya Foundation Trust was founded by a passionate group of advocates committed to empowering individuals with disabilities, including those with autism and other neurodiversities. Their primary motive is to provide specialized training programs that promote independent living and enhance employment skills. By fostering self-reliance and confidence, the trust aims to create a supportive environment where every individual can thrive and contribute meaningfully to society.
   <br />
+  <br/><br/>
 
               </p>
           </div>
@@ -236,29 +213,36 @@ const [isWide, setIsWide] = useState(false);
   {/* Content: Stack on mobile, row on desktop, centered */}
   <div className="w-[80%] flex flex-col md:flex-row gap-6 items-center -translate-y-[50px]">
     
-    {/* Box 1 */}
-    <div className="w-[320px] h-[160px] border-2 border-[#3f51b5] bg-white flex flex-col">
-      <div className="h-[25%] bg-[#f8d287] flex items-center pl-[20px]">
-        <span className="text-[#3f51b5] font-medium">Text 1</span>
-      </div>
-      <div className="h-[75%] p-[10px] relative flex flex-col">
-        <div className="h-1/2 flex items-start pl-[10px] text-[#3f51b5]">abc 1</div>
-        <div className="w-full h-[2px] bg-[#3f51b5] my-[5px]" />
-        <div className="h-1/2 flex items-end pl-[10px] text-[#3f51b5] -translate-y-[10px]">xyz 1</div>
-      </div>
+  {/* Box 1 */}
+  <div className="w-[80vw] h-auto border-2 border-[#3f51b5] bg-white flex flex-col">
+    {/* Top Header */}
+    <div className="h-[15%] bg-[#f8d287] flex items-center pl-[20px]">
+      <span className="text-[#3f51b5] font-medium">Ms Rubina Mohan</span>
     </div>
 
-    {/* Box 2 */}
-    <div className="w-[320px] h-[160px] border-2 border-[#3f51b5] bg-white flex flex-col">
-      <div className="h-[25%] bg-[#f8d287] flex items-center pl-[20px]">
-        <span className="text-[#3f51b5] font-medium">Text 2</span>
-      </div>
-      <div className="h-[75%] p-[10px] relative flex flex-col">
-        <div className="h-1/2 flex items-start pl-[10px] text-[#3f51b5]">abc 2</div>
-        <div className="w-full h-[2px] bg-[#3f51b5] my-[5px]" />
-        <div className="h-1/2 flex items-end pl-[10px] text-[#3f51b5] -translate-y-[10px]">xyz 2</div>
+    {/* Content */}
+    <div className="flex-1 p-[10px] relative flex flex-col">
+      <div className="flex items-start pl-[10px] text-[#3f51b5] text-justify">
+        As the CEO of Shaurya Foundation Trust, I bring 25 years of expertise and passion to my role. With a proven track record in functional training and inclusive employment for adults with neurodiverse needs, I have been instrumental in driving our mission towards financial empowerment and independent living. Under my leadership, Shaurya Foundation Trust continues to make a meaningful impact by creating inclusive employment models, fostering strong self-advocacy practices, and nurturing collaborative partnerships with parents, families, communities, and corporations. I champion this cause with great heart, empathy, and zeal.
       </div>
     </div>
+  </div>
+
+  {/* Box 2 */}
+  <div className="w-[80vw] h-auto border-2 border-[#3f51b5] bg-white flex flex-col">
+    {/* Top Header */}
+    <div className="h-[15%] bg-[#f8d287] flex items-center pl-[20px]">
+      <span className="text-[#3f51b5] font-medium">Ms Arpita Yadav</span>
+    </div>
+
+    {/* Content */}
+    <div className="flex-1 p-[10px] relative flex flex-col">
+      <div className="flex items-start pl-[10px] text-[#3f51b5] text-justify">
+        As the Director of Shaurya Foundation Trust in Palwal, I have transformed my personal hardships into a beacon of hope for neurodiverse adults, drawing on 24 years of experience in this vital work. Overcoming my own challenges has fueled my dedication to understanding and advocating for this community. Through empathy and innovative teaching methods, I empower individuals to develop essential life skills. My unwavering commitment fosters independence, helping them thrive and lead fulfilling lives, proving that resilience can create profound change.
+      </div>
+    </div>
+  </div>
+
 
   </div>
 
