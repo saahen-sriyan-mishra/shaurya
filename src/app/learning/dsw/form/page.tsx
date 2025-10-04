@@ -498,23 +498,23 @@ export default function DWS_form() {
       </div>
 
       {/* Mobile View */}
-      <div className="md:hidden">
+   {/*  
+       <div className="md:hidden">
         <div className="w-full flex flex-col">
-          {/* Top Section */}
           <div className="w-full flex items-center bg-white p-4" style={{ height: '4rem' }}>
             <span style={{ color: blueColor }} className="text-2xl font-bold mr-2">→</span>
             <h1 style={{ color: blueColor }} className="text-2xl font-bold">DSW Training Application</h1>
           </div>
 
-          {/* Middle Section */}
+         
           <div style={{ backgroundColor: yellowColor, height: '4rem' }} className="w-full flex items-center p-4">
             <p style={{ color: blueColor }} className="ml-4 italic text-lg">
               Join Our Comprehensive Training Program
             </p>
           </div>
 
-          {/* Content Section */}
-          <div style={{ backgroundColor: blueColor }} className="w-full py-8">
+          
+       <div style={{ backgroundColor: blueColor }} className="w-full py-8">
             <div className="w-full flex justify-center">
               <div className="w-full max-w-md px-4">
                 <p className="text-center mb-6" style={{ color: yellowColor }}>
@@ -536,8 +536,321 @@ export default function DWS_form() {
               </div>
             </div>
           </div>
+          
         </div>
       </div>
+      */}
+
+      <div className="md:hidden w-full">
+  <div className="w-full flex flex-col items-center">
+    {/* Top Section */}
+    <div className="w-full flex bg-white p-3" style={{ height: '4rem' }}>
+      <span style={{ color: blueColor }} className="text-3xl font-bold mr-2">→</span>
+      <h1 style={{ color: blueColor }} className="text-3xl font-bold text-center">DSW Training Application</h1>
+    </div>
+
+    {/* Middle Section */}
+    <div style={{ backgroundColor: yellowColor, minHeight: '4rem' }} className="w-full flex items-center justify-center p-4">
+      <p style={{ color: blueColor }} className="italic text-lg text-center">
+        Join Our Comprehensive Training Program
+      </p>
+    </div>
+
+    {/* Form Section */}
+    <div style={{ backgroundColor: blueColor }} className="w-full py-8 px-4">
+      <div className="w-full max-w-md mx-auto">
+        <form onSubmit={handleSubmit} className="space-y-8">
+          {submissionStatus === "success" && (
+            <p className="text-green-500 font-semibold text-center text-lg mb-4">
+              ✅ Application submitted successfully!
+            </p>
+          )}
+
+          {submissionStatus === "error" && (
+            <p className="text-red-500 font-semibold text-center text-lg mb-4">
+              ❌ Something went wrong. Please try again.
+            </p>
+          )}
+
+          {/* Personal Information */}
+          <div className="text-center">
+            <h2 className="text-xl font-bold mb-4 underline" style={{ color: yellowColor }}>Personal Information</h2>
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="fullName" className="block mb-2 text-left" style={{ color: yellowColor }}>Full Name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  style={inputStyle}
+                  required
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="dateOfBirth" className="block mb-2 text-left" style={{ color: yellowColor }}>Date of Birth</label>
+                <input
+                  type="date"
+                  id="dateOfBirth"
+                  name="dateOfBirth"
+                  value={formData.dateOfBirth}
+                  onChange={handleChange}
+                  style={inputStyle}
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-left" style={{ color: yellowColor }}>Gender</label>
+                <div className="flex justify-between">
+                  {['male', 'female', 'other'].map((gender) => (
+                    <label key={gender} className="flex items-center" style={{ color: yellowColor }}>
+                      <input
+                        type="radio"
+                        name="gender"
+                        value={gender}
+                        checked={formData.gender === gender}
+                        onChange={handleChange}
+                        className="mr-2"
+                        required
+                      />
+                      {gender.charAt(0).toUpperCase() + gender.slice(1)}
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block mb-2 text-left" style={{ color: yellowColor }}>Contact Number</label>
+                <PhoneInput
+                  international
+                  defaultCountry="IN"
+                  value={formData.phone}
+                  onChange={handlePhoneChange}
+                  style={phoneInputStyle}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block mb-2 text-left" style={{ color: yellowColor }}>Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  style={inputStyle}
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Educational Qualification */}
+          <div className="text-center">
+            <h2 className="text-xl font-bold mb-4 underline" style={{ color: yellowColor }}>Educational Qualification</h2>
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="highestDegree" className="block mb-2 text-left" style={{ color: yellowColor }}>Highest Degree Obtained</label>
+                <input
+                  type="text"
+                  id="highestDegree"
+                  name="highestDegree"
+                  value={formData.highestDegree}
+                  onChange={handleChange}
+                  style={inputStyle}
+                  placeholder="e.g., Bachelor of Science in Psychology"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="relevantCourses" className="block mb-2 text-left" style={{ color: yellowColor }}>Relevant Courses or Certifications</label>
+                <textarea
+                  id="relevantCourses"
+                  name="relevantCourses"
+                  value={formData.relevantCourses}
+                  onChange={handleChange}
+                  style={textareaStyle}
+                  placeholder="List any relevant courses, certifications, or training programs"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Experience */}
+          <div className="text-center">
+            <h2 className="text-xl font-bold mb-4 underline" style={{ color: yellowColor }}>Experience</h2>
+            <div className="space-y-4">
+              <div>
+                <label className="block mb-2 text-left" style={{ color: yellowColor }}>
+                  Prior Experience in Disability/Autism Care?
+                </label>
+                <div className="flex justify-around">
+                  {['yes', 'no'].map((option) => (
+                    <label key={option} className="flex items-center" style={{ color: yellowColor }}>
+                      <input
+                        type="radio"
+                        name="priorExperience"
+                        value={option}
+                        checked={formData.priorExperience === option}
+                        onChange={handleChange}
+                        className="mr-2"
+                        required
+                      />
+                      {option.charAt(0).toUpperCase() + option.slice(1)}
+                    </label>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <label htmlFor="experienceDetails" className="block mb-2 text-left" style={{ color: yellowColor }}>
+                  {formData.priorExperience === 'yes' ? 'Please specify your experience:' : 'No Experience'}
+                </label>
+                <textarea
+                  id="experienceDetails"
+                  name="experienceDetails"
+                  value={formData.experienceDetails}
+                  onChange={handleChange}
+                  style={textareaStyle}
+                  disabled={formData.priorExperience !== 'yes'}
+                  required={formData.priorExperience === 'yes'}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Availability */}
+          <div className="text-center">
+            <h2 className="text-xl font-bold mb-4 underline" style={{ color: yellowColor }}>Availability</h2>
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="preferredJoiningDate" className="block mb-2 text-left" style={{ color: yellowColor }}>Preferred Joining Date</label>
+                <input
+                  type="date"
+                  id="preferredJoiningDate"
+                  name="preferredJoiningDate"
+                  value={formData.preferredJoiningDate}
+                  onChange={handleChange}
+                  style={inputStyle}
+                  required
+                />
+              </div>
+              <div>
+                <label className="block mb-2 text-left" style={{ color: yellowColor }}>Role Preference</label>
+                <div className="flex justify-around">
+                  {['full-time', 'part-time'].map((role) => (
+                    <label key={role} className="flex items-center" style={{ color: yellowColor }}>
+                      <input
+                        type="radio"
+                        name="rolePreference"
+                        value={role}
+                        checked={formData.rolePreference === role}
+                        onChange={handleChange}
+                        className="mr-2"
+                        required
+                      />
+                      {role.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+                    </label>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Declaration */}
+          <div className="text-center">
+            <h2 className="text-xl font-bold mb-4 underline" style={{ color: yellowColor }}>Declaration</h2>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <input
+                  type="checkbox"
+                  id="declaration"
+                  required
+                  className="mr-3 mt-1 h-5 w-5 flex-shrink-0"
+                />
+                <label htmlFor="declaration" className="text-left" style={{ color: yellowColor }}>
+                  "I confirm all details provided are accurate to my best knowledge"
+                </label>
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <label htmlFor="signature" className="block mb-2 text-left" style={{ color: yellowColor }}>Signature (Full Name)</label>
+                  <input
+                    type="text"
+                    id="signature"
+                    name="signature"
+                    value={formData.signature}
+                    onChange={handleChange}
+                    style={inputStyle}
+                    placeholder="Type your full name as signature"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="declarationDate" className="block mb-2 text-left" style={{ color: yellowColor }}>Date</label>
+                  <input
+                    type="date"
+                    id="declarationDate"
+                    name="declarationDate"
+                    value={formData.declarationDate}
+                    onChange={handleChange}
+                    style={inputStyle}
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center pt-4">
+            <button
+              type="submit"
+              className="font-bold transition-all duration-300 rounded-lg w-full py-4 text-lg"
+              style={{
+                backgroundColor: isSubmitting ? "#ccc" : yellowColor,
+                color: blueColor,
+                cursor: isSubmitting ? "not-allowed" : "pointer"
+              }}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? (
+                <span className="flex items-center justify-center gap-2">
+                  <svg
+                    className="animate-spin h-5 w-5"
+                    style={{ color: blueColor }}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                    ></path>
+                  </svg>
+                  Submitting...
+                </span>
+              ) : (
+                "SUBMIT APPLICATION"
+              )}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     </section>
   );
 

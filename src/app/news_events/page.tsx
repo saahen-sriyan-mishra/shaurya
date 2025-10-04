@@ -63,24 +63,24 @@ export default function news_events() {
   // News items data
   const newsItems = [
     {
-      date: "Friday 1 June 2025",
-      title: "Lorius Ipsum",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula."
+      date: "September 11, 2024",
+      title: "Neurodivergent staff run the show at this new Delhi HC café. It’s fast becoming lawyers’ favourite haunt",
+      description: "On stepping inside the café, visitors are greeted by a warm and charming Arunima Bhaduri, who manages a kiosk of a non-profit, Shaurya Foundation Trust, at Sagar Express. Hand-made paintings, coasters, brownies, cookies, mugs, and water bottles made by neurodivergent persons..."
     },
     {
-      date: "Friday 2 June 2025",
-      title: "Lorius Ipsum",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula."
+      date: "July 9, 2024",
+      title: "Hope brews here! 10 neurodiverse individuals to run this cafe at Delhi HC",
+      description: "Senior advocate Ravi Gupta, the man behind the initiative of the high court in collaboration with NGO Shaurya Foundation Trust (SFT) and a famous restaurant chain of south India, described the café as “a transformative space dedicated to individuals with neurodiverse needs..."
     },
     {
-      date: "Friday 3 June 2025",
-      title: "Lorius Ipsum",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula."
+      date: "August 9, 2022 ",
+      title: "Nai Subah Foundation and Shaurya Foundation Trust collaborate for assisted employment program ‘Packaging Panthers’",
+      description: "Through this initiative, Nai Subah’s partner company, Anandkand Paramount will outsource semi-skilled packaging and production work to select individuals from Shaurya Foundation Trust at its Palwal site, creating employment initially for 12 select neurodiverse individuals from Shaurya Foundation Trust..."
     },
     {
-      date: "Friday 4 June 2025",
-      title: "Lorius Ipsum",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula."
+      date: "February 25, 2022",
+      title: "My ability is stronger than my disability: How Shaurya Foundation Trust is skill training and empowering persons with developmental disability. ",
+      description: "The core belief of the Shaurya Foundation revolves not only towards educating people with intellectual challenges but also preparing them to be self-sufficient for their future venture while strengthening them with life skills, says Mr Gupta. Talking about how they determine the potential of each child..."
     }
   ];
 
@@ -186,163 +186,161 @@ export default function news_events() {
           </div>
         </div>
 
-        <div className="hidden md:block">
-          <br/><br/>
-          {/* First Section */}
-          <div className="w-full flex flex-col">
-            {/* Top 15% */}
-            <div className="w-full h-[15vh] flex">
-              <div style={{ backgroundColor: yellowColor }} className="w-[7%]"></div>
-              <div className="w-[93%] flex items-center">
-                &nbsp; &nbsp; <span style={{ color: blueColor }} className="text-4xl font-bold">→</span>
-                <h1 style={{ color: blueColor }} className="text-4xl font-bold ml-4">Shaurya News</h1>
+<div className="hidden md:block">
+  <br/><br/>
+  {/* First Section */}
+  <div className="w-full flex flex-col">
+    {/* Top 15% */}
+    <div className="w-full h-[15vh] flex">
+      <div style={{ backgroundColor: yellowColor }} className="w-[7%]"></div>
+      <div className="w-[93%] flex items-center">
+        &nbsp; &nbsp; <span style={{ color: blueColor }} className="text-4xl font-bold">→</span>
+        <h1 style={{ color: blueColor }} className="text-4xl font-bold ml-4">Shaurya News</h1>
+      </div>
+    </div>
+
+    <div className="w-full flex">
+      {/* Left spacer */}
+      <div className="w-[7%]"></div>
+
+      {/* Main 93% section */}
+      <div className="w-[93%] min-h-[120vh]">
+
+        {/* First row with equal height containers */}
+        <div className="flex w-full mb-8">
+          <div className="w-[45%] flex">
+            <div className="w-full p-6 flex flex-col justify-between" style={{ backgroundColor: yellowColor, minHeight: '400px' }}>
+              <div className="flex-grow">
+                <p className="text-base font-medium mb-4 text-justify" style={{ color: blueColor }}>{newsItems[0].date}</p>
+                <div className="h-[2px] w-full mb-4" style={{ backgroundColor: blueColor }}></div>
+                <h3 className="text-lg font-bold mb-4 text-justify" style={{ color: blueColor }}>{newsItems[0].title}</h3>
+                <p className="text-base text-black text-justify leading-relaxed">{newsItems[0].description}</p>
+              </div>
+              <div className="mt-6 flex justify-start">
+                <button 
+                  className="w-[120px] h-[50px] flex items-center justify-center text-base font-medium border-2 transition-colors duration-300"
+                  style={{ 
+                    backgroundColor: blueColor, 
+                    color: yellowColor,
+                    borderColor: blueColor
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = yellowColor;
+                    e.currentTarget.style.color = blueColor;
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = blueColor;
+                    e.currentTarget.style.color = yellowColor;
+                  }}
+                >
+                  Read More
+                </button>
               </div>
             </div>
-
-
-            <div className="w-full flex">
-              {/* Left spacer */}
-              <div className="w-[7%]"></div>
-
-              {/* Main 93% section */}
-              <div className="w-[93%] min-h-[120vh]">
-
-                {/* First row */}
-                <div className="flex w-full h-[50vh] mb-8">
-                  <div className="w-[45%] flex">
-                    <div className="w-full p-14 flex flex-col justify-between" style={{ backgroundColor: yellowColor }}>
-                      <div>
-                        <p className="text-m font-medium mb-5" style={{ color: blueColor }}>Friday 1 June 2025</p>
-                        <div className="h-[2px] w-full mb-5" style={{ backgroundColor: blueColor }}></div>
-                        <h3 className="text-l font-bold mb-5" style={{ color: blueColor }}>Lorius Ipsum</h3>
-                        <p className="text-m text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
-                      </div>
-                      <div className="mt-8 flex justify-start">
-                        <button 
-                          className="w-[100px] h-[50px] flex items-center justify-center text-m font-medium border-2 transition-colors duration-300"
-                          style={{ 
-                            backgroundColor: blueColor, 
-                            color: yellowColor,
-                            borderColor: blueColor
-                          }}
-                          onMouseOver={(e) => {
-                            e.currentTarget.style.backgroundColor = yellowColor;
-                            e.currentTarget.style.color = blueColor;
-                          }}
-                          onMouseOut={(e) => {
-                            e.currentTarget.style.backgroundColor = blueColor;
-                            e.currentTarget.style.color = yellowColor;
-                          }}
-                        >
-                          Read More
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-[10%] bg-transparent"></div>
-                  <div className="w-[45%] flex">
-                    <div className="w-full p-14 flex flex-col justify-between" style={{ backgroundColor: yellowColor }}>
-                      <div>
-                        <p className="text-m font-medium mb-5" style={{ color: blueColor }}>Friday 1 June 2025</p>
-                        <div className="h-[2px] w-full mb-5" style={{ backgroundColor: blueColor }}></div>
-                        <h3 className="text-l font-bold mb-5" style={{ color: blueColor }}>Lorius Ipsum</h3>
-                        <p className="text-m text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
-                      </div>
-                      <div className="mt-8 flex justify-start">
-                        <button 
-                          className="w-[100px] h-[50px] flex items-center justify-center text-m font-medium border-2 transition-colors duration-300"
-                          style={{ 
-                            backgroundColor: blueColor, 
-                            color: yellowColor,
-                            borderColor: blueColor
-                          }}
-                          onMouseOver={(e) => {
-                            e.currentTarget.style.backgroundColor = yellowColor;
-                            e.currentTarget.style.color = blueColor;
-                          }}
-                          onMouseOut={(e) => {
-                            e.currentTarget.style.backgroundColor = blueColor;
-                            e.currentTarget.style.color = yellowColor;
-                          }}
-                        >
-                          Read More
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <br /> <br />
-
-                {/* Second row */}
-                <div className="flex w-full h-[50vh]">
-                  <div className="w-[45%] flex">
-                    <div className="w-full p-14 flex flex-col justify-between" style={{ backgroundColor: yellowColor }}>
-                      <div>
-                        <p className="text-m font-medium mb-5" style={{ color: blueColor }}>Friday 1 June 2025</p>
-                        <div className="h-[2px] w-full mb-5" style={{ backgroundColor: blueColor }}></div>
-                        <h3 className="text-l font-bold mb-5" style={{ color: blueColor }}>Lorius Ipsum</h3>
-                        <p className="text-m text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
-                      </div>
-                      <div className="mt-8 flex justify-start">
-                        <button 
-                          className="w-[100px] h-[50px] flex items-center justify-center text-m font-medium border-2 transition-colors duration-300"
-                          style={{ 
-                            backgroundColor: blueColor, 
-                            color: yellowColor,
-                            borderColor: blueColor
-                          }}
-                          onMouseOver={(e) => {
-                            e.currentTarget.style.backgroundColor = yellowColor;
-                            e.currentTarget.style.color = blueColor;
-                          }}
-                          onMouseOut={(e) => {
-                            e.currentTarget.style.backgroundColor = blueColor;
-                            e.currentTarget.style.color = yellowColor;
-                          }}
-                        >
-                          Read More
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-[10%] bg-transparent"></div>
-                  <div className="w-[45%] flex">
-                    <div className="w-full p-14 flex flex-col justify-between" style={{ backgroundColor: yellowColor }}>
-                      <div>
-                        <p className="text-m font-medium mb-5" style={{ color: blueColor }}>Friday 1 June 2025</p>
-                        <div className="h-[2px] w-full mb-5" style={{ backgroundColor: blueColor }}></div>
-                        <h3 className="text-l font-bold mb-5" style={{ color: blueColor }}>Lorius Ipsum</h3>
-                        <p className="text-m text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
-                      </div>
-                      <div className="mt-8 flex justify-start">
-                        <button 
-                          className="w-[100px] h-[50px] flex items-center justify-center text-m font-medium border-2 transition-colors duration-300"
-                          style={{ 
-                            backgroundColor: blueColor, 
-                            color: yellowColor,
-                            borderColor: blueColor
-                          }}
-                          onMouseOver={(e) => {
-                            e.currentTarget.style.backgroundColor = yellowColor;
-                            e.currentTarget.style.color = blueColor;
-                          }}
-                          onMouseOut={(e) => {
-                            e.currentTarget.style.backgroundColor = blueColor;
-                            e.currentTarget.style.color = yellowColor;
-                          }}
-                        >
-                          Read More
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
+          </div>
+          <div className="w-[10%] bg-transparent"></div>
+          <div className="w-[45%] flex">
+            <div className="w-full p-6 flex flex-col justify-between" style={{ backgroundColor: yellowColor, minHeight: '400px' }}>
+              <div className="flex-grow">
+                <p className="text-base font-medium mb-4 text-justify" style={{ color: blueColor }}>{newsItems[1].date}</p>
+                <div className="h-[2px] w-full mb-4" style={{ backgroundColor: blueColor }}></div>
+                <h3 className="text-lg font-bold mb-4 text-justify" style={{ color: blueColor }}>{newsItems[1].title}</h3>
+                <p className="text-base text-black text-justify leading-relaxed">{newsItems[1].description}</p>
+              </div>
+              <div className="mt-6 flex justify-start">
+                <button 
+                  className="w-[120px] h-[50px] flex items-center justify-center text-base font-medium border-2 transition-colors duration-300"
+                  style={{ 
+                    backgroundColor: blueColor, 
+                    color: yellowColor,
+                    borderColor: blueColor
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = yellowColor;
+                    e.currentTarget.style.color = blueColor;
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = blueColor;
+                    e.currentTarget.style.color = yellowColor;
+                  }}
+                >
+                  Read More
+                </button>
               </div>
             </div>
           </div>
         </div>
+
+        <br /> <br />
+
+        {/* Second row with equal height containers */}
+        <div className="flex w-full">
+          <div className="w-[45%] flex">
+            <div className="w-full p-6 flex flex-col justify-between" style={{ backgroundColor: yellowColor, minHeight: '400px' }}>
+              <div className="flex-grow">
+                <p className="text-base font-medium mb-4 text-justify" style={{ color: blueColor }}>{newsItems[2].date}</p>
+                <div className="h-[2px] w-full mb-4" style={{ backgroundColor: blueColor }}></div>
+                <h3 className="text-lg font-bold mb-4 text-justify" style={{ color: blueColor }}>{newsItems[2].title}</h3>
+                <p className="text-base text-black text-justify leading-relaxed">{newsItems[2].description}</p>
+              </div>
+              <div className="mt-6 flex justify-start">
+                <button 
+                  className="w-[120px] h-[50px] flex items-center justify-center text-base font-medium border-2 transition-colors duration-300"
+                  style={{ 
+                    backgroundColor: blueColor, 
+                    color: yellowColor,
+                    borderColor: blueColor
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = yellowColor;
+                    e.currentTarget.style.color = blueColor;
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = blueColor;
+                    e.currentTarget.style.color = yellowColor;
+                  }}
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="w-[10%] bg-transparent"></div>
+          <div className="w-[45%] flex">
+            <div className="w-full p-6 flex flex-col justify-between" style={{ backgroundColor: yellowColor, minHeight: '400px' }}>
+              <div className="flex-grow">
+                <p className="text-base font-medium mb-4 text-justify" style={{ color: blueColor }}>{newsItems[3].date}</p>
+                <div className="h-[2px] w-full mb-4" style={{ backgroundColor: blueColor }}></div>
+                <h3 className="text-lg font-bold mb-4 text-justify" style={{ color: blueColor }}>{newsItems[3].title}</h3>
+                <p className="text-base text-black text-justify leading-relaxed">{newsItems[3].description}</p>
+              </div>
+              <div className="mt-6 flex justify-start">
+                <button 
+                  className="w-[120px] h-[50px] flex items-center justify-center text-base font-medium border-2 transition-colors duration-300"
+                  style={{ 
+                    backgroundColor: blueColor, 
+                    color: yellowColor,
+                    borderColor: blueColor
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = yellowColor;
+                    e.currentTarget.style.color = blueColor;
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = blueColor;
+                    e.currentTarget.style.color = yellowColor;
+                  }}
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
       </div> 
 
       {/* Mobile View (shown on screens smaller than medium) */}
